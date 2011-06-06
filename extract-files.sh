@@ -29,7 +29,7 @@ adb pull /system/bin/port_bridge ../../../vendor/motorola/$DEVICE/proprietary/
 adb pull /system/bin/tcmd_engine ../../../vendor/motorola/$DEVICE/proprietary/
 adb pull /system/etc/AudioFilter.csv ../../../vendor/motorola/$DEVICE/proprietary/
 adb pull /system/etc/AudioPara4.csv ../../../vendor/motorola/$DEVICE/proprietary/
-adb pull /system/etc/BCM4325D1_004.002.004.0218.0225f.hcd ../../../vendor/motorola/$DEVICE/proprietary/
+adb pull /system/etc/BCM4325D1_004.002.004.0218.0225.hcd ../../../vendor/motorola/$DEVICE/proprietary/
 adb pull /system/etc/wifi/sdio-g-cdc-reclaim-wme.bin ../../../vendor/motorola/$DEVICE/proprietary/
 adb pull /system/lib/egl/libGLES_qcom.so ../../../vendor/motorola/$DEVICE/proprietary/
 adb pull /system/lib/libaudioeq.so ../../../vendor/motorola/$DEVICE/proprietary/
@@ -83,7 +83,7 @@ PRODUCT_COPY_FILES += \\
     vendor/motorola/__DEVICE__/proprietary/tcmd_engine:system/bin/tcmd_engine \\
     vendor/motorola/__DEVICE__/proprietary/AudioFilter.csv:system/etc/AudioFilter.csv \\
     vendor/motorola/__DEVICE__/proprietary/AudioPara4.csv:system/etc/AudioPara4.csv \\
-    vendor/motorola/__DEVICE__/proprietary/BCM4325D1_004.002.004.0218.0225f.hcd:system/etc/BCM4325D1_004.002.004.0218.0225f.hcd \\
+    vendor/motorola/__DEVICE__/proprietary/BCM4325D1_004.002.004.0218.0225.hcd:system/etc/BCM4325D1_004.002.004.0218.0225.hcd \\
     vendor/motorola/__DEVICE__/proprietary/sdio-g-cdc-reclaim-wme.bin:system/etc/wifi/sdio-g-cdc-reclaim-wme.bin \\
     vendor/motorola/__DEVICE__/proprietary/libaudioeq.so:system/lib/libaudioeq.so \\
     vendor/motorola/__DEVICE__/proprietary/libril-qc-1.so:system/lib/libril-qc-1.so \\
