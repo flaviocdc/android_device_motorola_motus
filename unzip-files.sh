@@ -19,45 +19,41 @@
 DEVICE=motus
 
 mkdir -p ../../../vendor/motorola/$DEVICE/proprietary
-unzip /system/bin/akmd2 ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/bin/akmd2 ../../../vendor/motorola/$DEVICE/proprietary/
 chmod 755 ../../../vendor/motorola/$DEVICE/proprietary/akmd2
-unzip /system/bin/touchpad ../../../vendor/motorola/$DEVICE/proprietary/
-unzip /system/bin/minipadut ../../../vendor/motorola/$DEVICE/proprietary/
-unzip /system/bin/qmuxd ../../../vendor/motorola/$DEVICE/proprietary/
-unzip /system/bin/fuel_gauge ../../../vendor/motorola/$DEVICE/proprietary/
-unzip /system/bin/mknod ../../../vendor/motorola/$DEVICE/proprietary/
-unzip /system/bin/port_bridge ../../../vendor/motorola/$DEVICE/proprietary/
-unzip /system/bin/tcmd_engine ../../../vendor/motorola/$DEVICE/proprietary/
-unzip /system/etc/AudioFilter.csv ../../../vendor/motorola/$DEVICE/proprietary/
-unzip /system/etc/AudioPara4.csv ../../../vendor/motorola/$DEVICE/proprietary/
-unzip /system/etc/BCM4325D1_004.002.004.0218.0225f.hcd ../../../vendor/motorola/$DEVICE/proprietary/
-unzip /system/etc/wifi/sdio-g-cdc-reclaim-wme.bin ../../../vendor/motorola/$DEVICE/proprietary/
-unzip /system/lib/egl/libGLES_qcom.so ../../../vendor/motorola/$DEVICE/proprietary/
-unzip /system/lib/libaudioeq.so ../../../vendor/motorola/$DEVICE/proprietary/
-unzip /system/lib/libril-qc-1.so ../../../vendor/motorola/$DEVICE/proprietary/
-unzip /system/lib/libqmi.so ../../../vendor/motorola/$DEVICE/proprietary/
-unzip /system/lib/libwmsts.so ../../../vendor/motorola/$DEVICE/proprietary/
-unzip /system/lib/libcm.so ../../../vendor/motorola/$DEVICE/proprietary/
-unzip /system/lib/libnv.so ../../../vendor/motorola/$DEVICE/proprietary/
-unzip /system/lib/libdss.so ../../../vendor/motorola/$DEVICE/proprietary/
-unzip /system/lib/libgsdi_exp.so ../../../vendor/motorola/$DEVICE/proprietary/
-unzip /system/lib/libgstk_exp.so ../../../vendor/motorola/$DEVICE/proprietary/
-unzip /system/lib/libwms.so ../../../vendor/motorola/$DEVICE/proprietary/
-unzip /system/lib/libmm-adspsvc.so ../../../vendor/motorola/$DEVICE/proprietary/
-unzip /system/lib/liboncrpc.so ../../../vendor/motorola/$DEVICE/proprietary/
-unzip /system/lib/libmmcamera.so ../../../vendor/motorola/$DEVICE/proprietary/
-unzip /system/lib/libOmxCore.so ../../../vendor/motorola/$DEVICE/proprietary/
-unzip /system/lib/libOmxH264Dec.so ../../../vendor/motorola/$DEVICE/proprietary/
-unzip /system/lib/libOmxMpeg4Dec.so ../../../vendor/motorola/$DEVICE/proprietary/
-unzip /system/lib/libOmxVidEnc.so ../../../vendor/motorola/$DEVICE/proprietary/
-unzip /system/usr/keychars/adp5588_motus.kcm.bin ../../../vendor/motorola/$DEVICE/proprietary
-unzip /system/usr/keychars/headset.kcm.bin ../../../vendor/motorola/$DEVICE/proprietary
-unzip /system/usr/keychars/motus-kpd.kcm.bin ../../../vendor/motorola/$DEVICE/proprietary
-unzip /system/usr/keylayout/adp5588_motus.kl ../../../vendor/motorola/$DEVICE/proprietary
-unzip /system/usr/keylayout/headset.kl ../../../vendor/motorola/$DEVICE/proprietary
-unzip /system/usr/keylayout/motus-kpd.kl ../../../vendor/motorola/$DEVICE/proprietary
-unzip /system/usr/keylayout/minipad.kl ../../../vendor/motorola/$DEVICE/proprietary
-unzip /system/usr/keylayout/touchscreen.kl ../../../vendor/motorola/$DEVICE/proprietary
+unzip -j -o ../../../${DEVICE}_update.zip system/bin/touchpad ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/bin/minipadut ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/bin/qmuxd ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/bin/fuel_gauge ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/bin/port_bridge ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/bin/tcmd_engine ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/etc/AudioFilter.csv ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/etc/AudioPara4.csv ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/etc/BCM4325D1_004.002.004.0218.0225f.hcd ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/etc/wifi/sdio-g-cdc-reclaim-wme.bin ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/egl/libGLES_qcom.so ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libaudioeq.so ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libril-qc-1.so ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libqmi.so ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libwmsts.so ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libcm.so ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libnv.so ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libdss.so ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libgsdi_exp.so ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libgstk_exp.so ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libwms.so ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libmm-adspsvc.so ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/liboncrpc.so ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libmmcamera.so ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libOmxCore.so ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libOmxH264Dec.so ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libOmxMpeg4Dec.so ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libOmxVidEnc.so ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/usr/keychars/adp5588_motus.kcm.bin ../../../vendor/motorola/$DEVICE/proprietary
+unzip -j -o ../../../${DEVICE}_update.zip system/usr/keylayout/adp5588_motus.kl ../../../vendor/motorola/$DEVICE/proprietary
+unzip -j -o ../../../${DEVICE}_update.zip system/usr/keylayout/headset.kl ../../../vendor/motorola/$DEVICE/proprietary
+unzip -j -o ../../../${DEVICE}_update.zip system/usr/keylayout/motus-kpd.kl ../../../vendor/motorola/$DEVICE/proprietary
+unzip -j -o ../../../${DEVICE}_update.zip system/usr/keylayout/touchscreen.kl ../../../vendor/motorola/$DEVICE/proprietary
 
 (cat << EOF) | sed s/__DEVICE__/$DEVICE/g > ../../../vendor/motorola/$DEVICE/$DEVICE-vendor-blobs.mk
 # Copyright (C) 2010 The Android Open Source Project
@@ -83,7 +79,6 @@ PRODUCT_COPY_FILES += \\
     vendor/motorola/__DEVICE__/proprietary/minipadut:system/bin/minipadut \\
     vendor/motorola/__DEVICE__/proprietary/qmuxd:system/bin/qmuxd \\
     vendor/motorola/__DEVICE__/proprietary/fuel_gauge:system/bin/fuel_gauge \\
-    vendor/motorola/__DEVICE__/proprietary/mknod:system/bin/mknod \\
     vendor/motorola/__DEVICE__/proprietary/port_bridge:system/bin/port_bridge \\
     vendor/motorola/__DEVICE__/proprietary/tcmd_engine:system/bin/tcmd_engine \\
     vendor/motorola/__DEVICE__/proprietary/AudioFilter.csv:system/etc/AudioFilter.csv \\
@@ -111,12 +106,9 @@ PRODUCT_COPY_FILES += \\
     vendor/motorola/__DEVICE__/proprietary/libOmxCore.so:system/lib/libOmxCore.so \\
     vendor/motorola/__DEVICE__/proprietary/libmm-omxcore.so:system/lib/libmm-omxcore.so \\
     vendor/motorola/__DEVICE__/proprietary/adp5588_motus.kcm.bin:system/usr/keychars/adp5588_motus.kcm \\
-    vendor/motorola/__DEVICE__/proprietary/headset.kcm.bin:system/usr/keychars/headset.kcm.bin \\
-    vendor/motorola/__DEVICE__/proprietary/motus-kpd.kcm.bin:system/usr/keychars/motus-kpd.kcm.bin \\
     vendor/motorola/__DEVICE__/proprietary/adp5588_motus.kl:system/usr/keylayout/adp5588_motus.kl \\
     vendor/motorola/__DEVICE__/proprietary/headset.kl:system/usr/keylayout/headset.kl \\
     vendor/motorola/__DEVICE__/proprietary/motus-kpd.kl:system/usr/keylayout/motus-kpd.kl \\
-    vendor/motorola/__DEVICE__/proprietary/minipad.kl:system/usr/keylayout/minipad.kl \\
     vendor/motorola/__DEVICE__/proprietary/touchscreen.kl:system/usr/keylayout/touchscreen.kl
 EOF
 

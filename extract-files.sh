@@ -25,7 +25,6 @@ adb pull /system/bin/touchpad ../../../vendor/motorola/$DEVICE/proprietary/
 adb pull /system/bin/minipadut ../../../vendor/motorola/$DEVICE/proprietary/
 adb pull /system/bin/qmuxd ../../../vendor/motorola/$DEVICE/proprietary/
 adb pull /system/bin/fuel_gauge ../../../vendor/motorola/$DEVICE/proprietary/
-adb pull /system/bin/mknod ../../../vendor/motorola/$DEVICE/proprietary/
 adb pull /system/bin/port_bridge ../../../vendor/motorola/$DEVICE/proprietary/
 adb pull /system/bin/tcmd_engine ../../../vendor/motorola/$DEVICE/proprietary/
 adb pull /system/etc/AudioFilter.csv ../../../vendor/motorola/$DEVICE/proprietary/
@@ -51,12 +50,9 @@ adb pull /system/lib/libOmxH264Dec.so ../../../vendor/motorola/$DEVICE/proprieta
 adb pull /system/lib/libOmxMpeg4Dec.so ../../../vendor/motorola/$DEVICE/proprietary/
 adb pull /system/lib/libOmxVidEnc.so ../../../vendor/motorola/$DEVICE/proprietary/
 adb pull /system/usr/keychars/adp5588_motus.kcm.bin ../../../vendor/motorola/$DEVICE/proprietary
-adb pull /system/usr/keychars/headset.kcm.bin ../../../vendor/motorola/$DEVICE/proprietary
-adb pull /system/usr/keychars/motus-kpd.kcm.bin ../../../vendor/motorola/$DEVICE/proprietary
 adb pull /system/usr/keylayout/adp5588_motus.kl ../../../vendor/motorola/$DEVICE/proprietary
 adb pull /system/usr/keylayout/headset.kl ../../../vendor/motorola/$DEVICE/proprietary
 adb pull /system/usr/keylayout/motus-kpd.kl ../../../vendor/motorola/$DEVICE/proprietary
-adb pull /system/usr/keylayout/minipad.kl ../../../vendor/motorola/$DEVICE/proprietary
 adb pull /system/usr/keylayout/touchscreen.kl ../../../vendor/motorola/$DEVICE/proprietary
 
 (cat << EOF) | sed s/__DEVICE__/$DEVICE/g > ../../../vendor/motorola/$DEVICE/$DEVICE-vendor-blobs.mk
@@ -83,7 +79,6 @@ PRODUCT_COPY_FILES += \\
     vendor/motorola/__DEVICE__/proprietary/minipadut:system/bin/minipadut \\
     vendor/motorola/__DEVICE__/proprietary/qmuxd:system/bin/qmuxd \\
     vendor/motorola/__DEVICE__/proprietary/fuel_gauge:system/bin/fuel_gauge \\
-    vendor/motorola/__DEVICE__/proprietary/mknod:system/bin/mknod \\
     vendor/motorola/__DEVICE__/proprietary/port_bridge:system/bin/port_bridge \\
     vendor/motorola/__DEVICE__/proprietary/tcmd_engine:system/bin/tcmd_engine \\
     vendor/motorola/__DEVICE__/proprietary/AudioFilter.csv:system/etc/AudioFilter.csv \\
@@ -111,12 +106,9 @@ PRODUCT_COPY_FILES += \\
     vendor/motorola/__DEVICE__/proprietary/libOmxCore.so:system/lib/libOmxCore.so \\
     vendor/motorola/__DEVICE__/proprietary/libmm-omxcore.so:system/lib/libmm-omxcore.so \\
     vendor/motorola/__DEVICE__/proprietary/adp5588_motus.kcm.bin:system/usr/keychars/adp5588_motus.kcm \\
-    vendor/motorola/__DEVICE__/proprietary/headset.kcm.bin:system/usr/keychars/headset.kcm.bin \\
-    vendor/motorola/__DEVICE__/proprietary/motus-kpd.kcm.bin:system/usr/keychars/motus-kpd.kcm.bin \\
     vendor/motorola/__DEVICE__/proprietary/adp5588_motus.kl:system/usr/keylayout/adp5588_motus.kl \\
     vendor/motorola/__DEVICE__/proprietary/headset.kl:system/usr/keylayout/headset.kl \\
     vendor/motorola/__DEVICE__/proprietary/motus-kpd.kl:system/usr/keylayout/motus-kpd.kl \\
-    vendor/motorola/__DEVICE__/proprietary/minipad.kl:system/usr/keylayout/minipad.kl \\
     vendor/motorola/__DEVICE__/proprietary/touchscreen.kl:system/usr/keylayout/touchscreen.kl
 
 EOF
