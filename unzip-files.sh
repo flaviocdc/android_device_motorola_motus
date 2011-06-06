@@ -50,6 +50,7 @@ unzip -j -o ../../../${DEVICE}_update.zip system/lib/libOmxCore.so -d ../../../v
 unzip -j -o ../../../${DEVICE}_update.zip system/lib/libOmxH264Dec.so -d ../../../vendor/motorola/$DEVICE/proprietary/
 unzip -j -o ../../../${DEVICE}_update.zip system/lib/libOmxMpeg4Dec.so -d ../../../vendor/motorola/$DEVICE/proprietary/
 unzip -j -o ../../../${DEVICE}_update.zip system/lib/libOmxVidEnc.so -d ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libvideotrimer.so -d ../../../vendor/motorola/$DEVICE/proprietary/
 unzip -j -o ../../../${DEVICE}_update.zip system/usr/keychars/adp5588_motus.kcm.bin -d ../../../vendor/motorola/$DEVICE/proprietary
 unzip -j -o ../../../${DEVICE}_update.zip system/usr/keylayout/adp5588_motus.kl -d ../../../vendor/motorola/$DEVICE/proprietary
 unzip -j -o ../../../${DEVICE}_update.zip system/usr/keylayout/headset.kl -d ../../../vendor/motorola/$DEVICE/proprietary
@@ -105,6 +106,7 @@ PRODUCT_COPY_FILES += \\
     vendor/motorola/__DEVICE__/proprietary/libOmxMpeg4Dec.so:system/lib/libOmxMpeg4Dec.so \\
     vendor/motorola/__DEVICE__/proprietary/libOmxVidEnc.so:system/lib/libOmxVidEnc.so \\
     vendor/motorola/__DEVICE__/proprietary/libOmxCore.so:system/lib/libOmxCore.so \\
+    vendor/motorola/__DEVICE__/proprietary/libvideotrimer.so:system/lib/libvideotrimer.so \\
     vendor/motorola/__DEVICE__/proprietary/libmm-omxcore.so:system/lib/libmm-omxcore.so \\
     vendor/motorola/__DEVICE__/proprietary/adp5588_motus.kcm.bin:system/usr/keychars/adp5588_motus.kcm \\
     vendor/motorola/__DEVICE__/proprietary/adp5588_motus.kl:system/usr/keylayout/adp5588_motus.kl \\
