@@ -95,9 +95,8 @@ PRODUCT_COPY_FILES += \\
     vendor/motorola/__DEVICE__/proprietary/libwmsts.so:system/lib/libwmsts.so \\
     vendor/motorola/__DEVICE__/proprietary/libcm.so:system/lib/libcm.so \\
     vendor/motorola/__DEVICE__/proprietary/libdss.so:system/lib/libdss.so \\
-    vendor/motorola/__DEVICE__/proprietary/libmmgsdilib.so:system/lib/libmmgsdilib.so \\
     vendor/motorola/__DEVICE__/proprietary/libgsdi_exp.so:system/lib/libgsdi_exp.so \\
-    vendor/motorola/__DEVICE__/proprietary/libdgstk_exp.so:system/lib/libgstk_exp.so \\
+    vendor/motorola/__DEVICE__/proprietary/libgstk_exp.so:system/lib/libgstk_exp.so \\
     vendor/motorola/__DEVICE__/proprietary/libwms.so:system/lib/libwms.so \\
     vendor/motorola/__DEVICE__/proprietary/liboncrpc.so:system/lib/liboncrpc.so \\
     vendor/motorola/__DEVICE__/proprietary/libmm-adspsvc.so:system/lib/libmm-adspsvc.so \\
@@ -107,7 +106,6 @@ PRODUCT_COPY_FILES += \\
     vendor/motorola/__DEVICE__/proprietary/libOmxVidEnc.so:system/lib/libOmxVidEnc.so \\
     vendor/motorola/__DEVICE__/proprietary/libOmxCore.so:system/lib/libOmxCore.so \\
     vendor/motorola/__DEVICE__/proprietary/libvideotrimer.so:system/lib/libvideotrimer.so \\
-    vendor/motorola/__DEVICE__/proprietary/libmm-omxcore.so:system/lib/libmm-omxcore.so \\
     vendor/motorola/__DEVICE__/proprietary/adp5588_motus.kcm.bin:system/usr/keychars/adp5588_motus.kcm \\
     vendor/motorola/__DEVICE__/proprietary/adp5588_motus.kl:system/usr/keylayout/adp5588_motus.kl \\
     vendor/motorola/__DEVICE__/proprietary/headset.kl:system/usr/keylayout/headset.kl \\
