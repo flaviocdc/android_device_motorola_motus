@@ -10,7 +10,6 @@ rild.libargs = -d /dev/smd0
 android.keylayout.adp5588_motus = /system/usr/keylayout/adp5588_motus.kl
 android.keychar.adp5588_motus = /system/usr/keychars/adp5588_motus.kcm.bin
 android.keylayout.headphone = /system/usr/keylayout/headset.kl
-android.keychar.headphone = /system/usr/keychars/headset.kcm.bin
 
 wifi.interface = eth0
 #wifi.dhcpinterface eth0

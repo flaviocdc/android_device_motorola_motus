@@ -22,11 +22,30 @@ mkdir -p ../../../vendor/motorola/$DEVICE/proprietary
 adb pull /system/bin/akmd2 ../../../vendor/motorola/$DEVICE/proprietary/
 chmod 755 ../../../vendor/motorola/$DEVICE/proprietary/akmd2
 adb pull /system/bin/touchpad ../../../vendor/motorola/$DEVICE/proprietary/
+chmod 755 ../../../vendor/motorola/$DEVICE/proprietary/touchpad
 adb pull /system/bin/minipadut ../../../vendor/motorola/$DEVICE/proprietary/
+chmod 755 ../../../vendor/motorola/$DEVICE/proprietary/minipadut
 adb pull /system/bin/qmuxd ../../../vendor/motorola/$DEVICE/proprietary/
+chmod 755 ../../../vendor/motorola/$DEVICE/proprietary/qmuxd
 adb pull /system/bin/fuel_gauge ../../../vendor/motorola/$DEVICE/proprietary/
+chmod 755 ../../../vendor/motorola/$DEVICE/proprietary/fuel_gauge
 adb pull /system/bin/port_bridge ../../../vendor/motorola/$DEVICE/proprietary/
+chmod 755 ../../../vendor/motorola/$DEVICE/proprietary/port_bridge
 adb pull /system/bin/tcmd_engine ../../../vendor/motorola/$DEVICE/proprietary/
+chmod 755 ../../../vendor/motorola/$DEVICE/proprietary/tcmd_engine
+adb pull /system/bin/tcmd_sql ../../../vendor/motorola/$DEVICE/proprietary/
+chmod 755 ../../../vendor/motorola/$DEVICE/proprietary/tcmd_engine
+adb pull /system/bin/bt_downloader ../../../vendor/motorola/$DEVICE/proprietary/
+chmod 755 ../../../vendor/motorola/$DEVICE/proprietary/bt_downloader
+adb pull /system/bin/bt_init ../../../vendor/motorola/$DEVICE/proprietary/
+chmod 755 ../../../vendor/motorola/$DEVICE/proprietary/bt_init
+adb pull /system/etc/akm/akmd_set.cfg ../../../vendor/motorola/$DEVICE/proprietary/
+adb pull /system/etc/fuel_gauge/0006.dffs ../../../vendor/motorola/$DEVICE/proprietary/
+adb pull /system/etc/fuel_gauge/0301.bqfs ../../../vendor/motorola/$DEVICE/proprietary/
+adb pull /system/etc/minipad/104/minipad.cfg ../../../vendor/motorola/$DEVICE/proprietary/
+adb pull /system/etc/minipad/104/minipad.enc ../../../vendor/motorola/$DEVICE/proprietary/
+adb pull /system/etc/minipad/104/saveconfig.cfg ../../../vendor/motorola/$DEVICE/proprietary/
+adb pull /system/etc/bt_init.config ../../../vendor/motorola/$DEVICE/proprietary/
 adb pull /system/etc/AudioFilter.csv ../../../vendor/motorola/$DEVICE/proprietary/
 adb pull /system/etc/AudioPara4.csv ../../../vendor/motorola/$DEVICE/proprietary/
 adb pull /system/etc/BCM4325D1_004.002.004.0218.0225.hcd ../../../vendor/motorola/$DEVICE/proprietary/
@@ -34,27 +53,32 @@ adb pull /system/etc/wifi/sdio-g-cdc-reclaim-wme.bin ../../../vendor/motorola/$D
 adb pull /system/lib/egl/libGLES_qcom.so ../../../vendor/motorola/$DEVICE/proprietary/
 adb pull /system/lib/libaudioeq.so ../../../vendor/motorola/$DEVICE/proprietary/
 adb pull /system/lib/libril-qc-1.so ../../../vendor/motorola/$DEVICE/proprietary/
+adb pull /system/lib/libril-moto-umts-1.so ../../../vendor/motorola/$DEVICE/proprietary/
 adb pull /system/lib/libqmi.so ../../../vendor/motorola/$DEVICE/proprietary/
 adb pull /system/lib/libwmsts.so ../../../vendor/motorola/$DEVICE/proprietary/
 adb pull /system/lib/libcm.so ../../../vendor/motorola/$DEVICE/proprietary/
 adb pull /system/lib/libnv.so ../../../vendor/motorola/$DEVICE/proprietary/
 adb pull /system/lib/libdss.so ../../../vendor/motorola/$DEVICE/proprietary/
+adb pull /system/lib/libdsm.so ../../../vendor/motorola/$DEVICE/proprietary/
+adb pull /system/lib/libmmgsdilib.so ../../../vendor/motorola/$DEVICE/proprietary/
 adb pull /system/lib/libgsdi_exp.so ../../../vendor/motorola/$DEVICE/proprietary/
 adb pull /system/lib/libgstk_exp.so ../../../vendor/motorola/$DEVICE/proprietary/
 adb pull /system/lib/libwms.so ../../../vendor/motorola/$DEVICE/proprietary/
 adb pull /system/lib/libmm-adspsvc.so ../../../vendor/motorola/$DEVICE/proprietary/
 adb pull /system/lib/liboncrpc.so ../../../vendor/motorola/$DEVICE/proprietary/
+adb pull /system/lib/libqueue.so ../../../vendor/motorola/$DEVICE/proprietary/
+adb pull /system/lib/libsnd.so ../../../vendor/motorola/$DEVICE/proprietary/
 adb pull /system/lib/libmmcamera.so ../../../vendor/motorola/$DEVICE/proprietary/
 adb pull /system/lib/libOmxCore.so ../../../vendor/motorola/$DEVICE/proprietary/
 adb pull /system/lib/libOmxH264Dec.so ../../../vendor/motorola/$DEVICE/proprietary/
 adb pull /system/lib/libOmxMpeg4Dec.so ../../../vendor/motorola/$DEVICE/proprietary/
 adb pull /system/lib/libOmxVidEnc.so ../../../vendor/motorola/$DEVICE/proprietary/
-adb pull /system/lib/libvideotrimer.so ../../../vendor/motorola/$DEVICE/proprietary
-adb pull /system/usr/keychars/adp5588_motus.kcm.bin ../../../vendor/motorola/$DEVICE/proprietary
-adb pull /system/usr/keylayout/adp5588_motus.kl ../../../vendor/motorola/$DEVICE/proprietary
-adb pull /system/usr/keylayout/headset.kl ../../../vendor/motorola/$DEVICE/proprietary
-adb pull /system/usr/keylayout/motus-kpd.kl ../../../vendor/motorola/$DEVICE/proprietary
-adb pull /system/usr/keylayout/touchscreen.kl ../../../vendor/motorola/$DEVICE/proprietary
+adb pull /system/lib/libvideotrimer.so ../../../vendor/motorola/$DEVICE/proprietary/
+adb pull /system/usr/keychars/adp5588_motus.kcm.bin ../../../vendor/motorola/$DEVICE/proprietary/
+adb pull /system/usr/keylayout/adp5588_motus.kl ../../../vendor/motorola/$DEVICE/proprietary/
+adb pull /system/usr/keylayout/headset.kl ../../../vendor/motorola/$DEVICE/proprietary/
+adb pull /system/usr/keylayout/motus-kpd.kl ../../../vendor/motorola/$DEVICE/proprietary/
+adb pull /system/usr/keylayout/touchscreen.kl ../../../vendor/motorola/$DEVICE/proprietary/
 
 (cat << EOF) | sed s/__DEVICE__/$DEVICE/g > ../../../vendor/motorola/$DEVICE/$DEVICE-vendor-blobs.mk
 # Copyright (C) 2010 The Android Open Source Project
@@ -82,22 +106,36 @@ PRODUCT_COPY_FILES += \\
     vendor/motorola/__DEVICE__/proprietary/fuel_gauge:system/bin/fuel_gauge \\
     vendor/motorola/__DEVICE__/proprietary/port_bridge:system/bin/port_bridge \\
     vendor/motorola/__DEVICE__/proprietary/tcmd_engine:system/bin/tcmd_engine \\
+    vendor/motorola/__DEVICE__/proprietary/tcmd_sql:system/bin/tcmd_sql \\
+    vendor/motorola/__DEVICE__/proprietary/bt_downloader:/system/bin/bt_downloader \\
+    vendor/motorola/__DEVICE__/proprietary/bt_init:/system/bin/bt_init \\
+    vendor/motorola/__DEVICE__/proprietary/bt_init.config:/system/etc/bt_init.config \\
+    vendor/motorola/__DEVICE__/proprietary/akmd_set.cfg:system/etc/fuel_gauge/akmd_set.cfg \\
+    vendor/motorola/__DEVICE__/proprietary/0006.dffs:system/etc/fuel_gauge/0006.dffs \\
+    vendor/motorola/__DEVICE__/proprietary/0301.bqfs:system/etc/fuel_gauge/0301.bqfs \\
+    vendor/motorola/__DEVICE__/proprietary/minipad.cfg:system/etc/minipad/104/minipad.cfg \\
+    vendor/motorola/__DEVICE__/proprietary/minipad.enc:system/etc/minipad/104/minipad.enc \\
+    vendor/motorola/__DEVICE__/proprietary/saveconfig.cfg:system/etc/minipad/104/saveconfig.cfg \\
     vendor/motorola/__DEVICE__/proprietary/AudioFilter.csv:system/etc/AudioFilter.csv \\
     vendor/motorola/__DEVICE__/proprietary/AudioPara4.csv:system/etc/AudioPara4.csv \\
     vendor/motorola/__DEVICE__/proprietary/BCM4325D1_004.002.004.0218.0225.hcd:system/etc/BCM4325D1_004.002.004.0218.0225.hcd \\
     vendor/motorola/__DEVICE__/proprietary/sdio-g-cdc-reclaim-wme.bin:system/etc/wifi/sdio-g-cdc-reclaim-wme.bin \\
     vendor/motorola/__DEVICE__/proprietary/libaudioeq.so:system/lib/libaudioeq.so \\
     vendor/motorola/__DEVICE__/proprietary/libril-qc-1.so:system/lib/libril-qc-1.so \\
+    vendor/motorola/__DEVICE__/proprietary/libril-moto-umts-1.so:system/lib/libril-moto-umts-1.so \\
     vendor/motorola/__DEVICE__/proprietary/libwmsts.so:system/lib/libwmsts.so \\
     vendor/motorola/__DEVICE__/proprietary/libqmi.so:system/lib/libqmi.so \\
     vendor/motorola/__DEVICE__/proprietary/libnv.so:system/lib/libnv.so \\
-    vendor/motorola/__DEVICE__/proprietary/libwmsts.so:system/lib/libwmsts.so \\
     vendor/motorola/__DEVICE__/proprietary/libcm.so:system/lib/libcm.so \\
     vendor/motorola/__DEVICE__/proprietary/libdss.so:system/lib/libdss.so \\
+    vendor/motorola/__DEVICE__/proprietary/libdsm.so:system/lib/libdsm.so \\
+    vendor/motorola/__DEVICE__/proprietary/libmmgsdilib.so:system/lib/libmmgsdilib.so \\
     vendor/motorola/__DEVICE__/proprietary/libgsdi_exp.so:system/lib/libgsdi_exp.so \\
     vendor/motorola/__DEVICE__/proprietary/libgstk_exp.so:system/lib/libgstk_exp.so \\
     vendor/motorola/__DEVICE__/proprietary/libwms.so:system/lib/libwms.so \\
     vendor/motorola/__DEVICE__/proprietary/liboncrpc.so:system/lib/liboncrpc.so \\
+    vendor/motorola/__DEVICE__/proprietary/libqueue.so:system/lib/libqueue.so \\
+    vendor/motorola/__DEVICE__/proprietary/libsnd.so:system/lib/libsnd.so \\
     vendor/motorola/__DEVICE__/proprietary/libmm-adspsvc.so:system/lib/libmm-adspsvc.so \\
     vendor/motorola/__DEVICE__/proprietary/libmmcamera.so:system/lib/libmmcamera.so \\
     vendor/motorola/__DEVICE__/proprietary/libOmxH264Dec.so:system/lib/libOmxH264Dec.so \\
