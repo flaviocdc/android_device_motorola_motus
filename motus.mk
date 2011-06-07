@@ -95,7 +95,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/motorola/motus/btenable.sh:system/bin/btenable.sh \
     device/motorola/motus/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
-    device/motorola/motus/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf 
+    device/motorola/motus/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf \
     device/motorola/motus/saveconfig.cfg:system/etc/touchpad/50/saveconfig.cfg \
     device/motorola/motus/touchpad.cfg:system/etc/touchpad/50/touchpad.cfg \
     device/motorola/motus/touchpad.enc:system/etc/touchpad/50/touchpad.enc
