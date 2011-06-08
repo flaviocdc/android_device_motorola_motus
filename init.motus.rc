@@ -181,7 +181,7 @@ on boot
 
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 245760
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 528000
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor interactive
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor smartass
 
     # lowmemkiller adjustments   
     write /sys/module/lowmemorykiller/parameters/adj 0,1,2,7,14,15
@@ -233,6 +233,13 @@ service hciattach /system/bin/brcm_patchram_plus --enable_hci --baudrate 3000000
     user bluetooth
     group bluetooth net_bt_admin net_admin net_raw misc
     disabled
+
+# Set RIL
+    setprop rild.libpath /system/lib/libril-qc-1.so
+    setprop rild.libargs "-d /dev/smd0"
+
+# Speed up SDCard
+    write /sys/block/mmcblk0/bdi/read_ahead_kb 4096
 
 # touchpad service
 service touchpad /system/bin/touchpad -a /data/touchpad.log

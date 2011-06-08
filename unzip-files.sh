@@ -70,7 +70,6 @@ unzip -j -o ../../../${DEVICE}_update.zip system/lib/liboncrpc.so -d ../../../ve
 unzip -j -o ../../../${DEVICE}_update.zip system/lib/libqueue.so -d ../../../vendor/motorola/$DEVICE/proprietary/
 unzip -j -o ../../../${DEVICE}_update.zip system/lib/libsnd.so -d ../../../vendor/motorola/$DEVICE/proprietary/
 unzip -j -o ../../../${DEVICE}_update.zip system/lib/libmmcamera.so -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/lib/libOmxCore.so -d ../../../vendor/motorola/$DEVICE/proprietary/
 unzip -j -o ../../../${DEVICE}_update.zip system/lib/libOmxH264Dec.so -d ../../../vendor/motorola/$DEVICE/proprietary/
 unzip -j -o ../../../${DEVICE}_update.zip system/lib/libOmxMpeg4Dec.so -d ../../../vendor/motorola/$DEVICE/proprietary/
 unzip -j -o ../../../${DEVICE}_update.zip system/lib/libOmxVidEnc.so -d ../../../vendor/motorola/$DEVICE/proprietary/
@@ -80,6 +79,20 @@ unzip -j -o ../../../${DEVICE}_update.zip system/usr/keylayout/adp5588_motus.kl 
 unzip -j -o ../../../${DEVICE}_update.zip system/usr/keylayout/headset.kl -d ../../../vendor/motorola/$DEVICE/proprietary/
 unzip -j -o ../../../${DEVICE}_update.zip system/usr/keylayout/motus-kpd.kl -d ../../../vendor/motorola/$DEVICE/proprietary/
 unzip -j -o ../../../${DEVICE}_update.zip system/usr/keylayout/touchscreen.kl -d ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libcamera.so -d ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libmm-qcamera-tgt.so -d ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libhpprop.so -d ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libmmjpeg.so -d ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libomx_sharedlibrary_qc.so -d ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libomx_wmadec_sharedlibrary.so -d ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libOmxMp3Dec.so -d ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libomx_wmvdec_sharedlibrary.so -d ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libopencore_motlocal.so -d ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libopencore_motlocalreg.so -d ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libspeech.so -d ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/etc/01_pvplayer_mot.cfg -d ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/etc/wifi/nvram.txt -d ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/etc/pvplayer_mot.cfg -d ../../../vendor/motorola/$DEVICE/proprietary/
 
 (cat << EOF) | sed s/__DEVICE__/$DEVICE/g > ../../../vendor/$MANUFACTURER/$DEVICE/$DEVICE-vendor-blobs.mk
 # Copyright (C) 2010 The Android Open Source Project
@@ -143,13 +156,27 @@ PRODUCT_COPY_FILES += \\
     vendor/motorola/__DEVICE__/proprietary/libOmxH264Dec.so:system/lib/libOmxH264Dec.so \\
     vendor/motorola/__DEVICE__/proprietary/libOmxMpeg4Dec.so:system/lib/libOmxMpeg4Dec.so \\
     vendor/motorola/__DEVICE__/proprietary/libOmxVidEnc.so:system/lib/libOmxVidEnc.so \\
-    vendor/motorola/__DEVICE__/proprietary/libOmxCore.so:system/lib/libOmxCore.so \\
     vendor/motorola/__DEVICE__/proprietary/libvideotrimer.so:system/lib/libvideotrimer.so \\
     vendor/motorola/__DEVICE__/proprietary/adp5588_motus.kcm.bin:system/usr/keychars/adp5588_motus.kcm \\
     vendor/motorola/__DEVICE__/proprietary/adp5588_motus.kl:system/usr/keylayout/adp5588_motus.kl \\
     vendor/motorola/__DEVICE__/proprietary/headset.kl:system/usr/keylayout/headset.kl \\
     vendor/motorola/__DEVICE__/proprietary/motus-kpd.kl:system/usr/keylayout/motus-kpd.kl \\
-    vendor/motorola/__DEVICE__/proprietary/touchscreen.kl:system/usr/keylayout/touchscreen.kl
+    vendor/motorola/__DEVICE__/proprietary/touchscreen.kl:system/usr/keylayout/touchscreen.kl \\
+    vendor/motorola/__DEVICE__/proprietary/libmm-qcamera-tgt.so:system/lib/libmm-qcamera-tgt.so \\
+    vendor/motorola/__DEVICE__/proprietary/libmmjpeg.so:system/lib/libmmjpeg.so \\
+    vendor/motorola/__DEVICE__/proprietary/libhpprop.so:system/lib/libhpprop.so \\
+    vendor/motorola/__DEVICE__/proprietary/libcamera.so:system/lib/libcamera.so \\
+    vendor/motorola/__DEVICE__/proprietary/libomx_sharedlibrary_qc.so:system/lib/libomx_sharedlibrary_qc.so \\
+    vendor/motorola/__DEVICE__/proprietary/libomx_wmadec_sharedlibrary.so:system/lib/libomx_wmadec_sharedlibrary.so \\
+    vendor/motorola/__DEVICE__/proprietary/libomx_wmvdec_sharedlibrary.so:system/lib/libomx_wmvdec_sharedlibrary.so \\
+    vendor/motorola/__DEVICE__/proprietary/libOmxMp3Dec.so:system/lib/libOmxMp3Dec.so \\
+    vendor/motorola/__DEVICE__/proprietary/libopencore_motlocal.so:system/lib/libopencore_motlocal.so \\
+    vendor/motorola/__DEVICE__/proprietary/libopencore_motlocalreg.so:system/lib/libopencore_motlocalreg.so \\
+    vendor/motorola/__DEVICE__/proprietary/libspeech.so:system/lib/libspeech.so \\
+    vendor/motorola/__DEVICE__/proprietary/01_pvplayer_mot.cfg:system/etc/01_pvplayer_mot.cfg \\
+    vendor/motorola/__DEVICE__/proprietary/nvram.txt:system/etc/wifi/nvram.txt \\
+    vendor/motorola/__DEVICE__/proprietary/pvplayer_mot.cfg:system/etc/pvplayer_mot.cfg \\
+
 EOF
 
 ./setup-makefiles.sh
