@@ -26,6 +26,7 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
 PRODUCT_COPY_FILES += \
     device/motorola/motus/init.motus.rc:root/init.motus.rc \
+    device/motorola/motus/charge_only_mode:root/charge_only_mode
 
 ## (3)  Finally, the least specific parts, i.e. the non-GSM-specific aspects
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -81,7 +82,7 @@ PRODUCT_PACKAGES += \
     dexpreopt \
     setrecovery
 
-DISABLE_DEXPREOPT := false
+DISABLE_DEXPREOPT := true
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise

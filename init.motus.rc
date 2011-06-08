@@ -5,6 +5,9 @@ on early-init
     write /sys/devices/virtual/net/rmnet0/timeout_suspend 5000000
     write /sys/devices/virtual/net/rmnet0/timeout 18000000
 
+on init
+    exec /sbin/charge_only_mode
+
 on boot
 # unmap left alt to avoid console switch
     setkey 0x0 0x38 0x0
@@ -233,6 +236,9 @@ service hciattach /system/bin/brcm_patchram_plus --enable_hci --baudrate 3000000
     user bluetooth
     group bluetooth net_bt_admin net_admin net_raw misc
     disabled
+
+service btenable /system/xbin/busybox sh /system/bin/btenable.sh
+    oneshot
 
 # Set RIL
     setprop rild.libpath /system/lib/libril-qc-1.so
