@@ -79,7 +79,6 @@ unzip -j -o ../../../${DEVICE}_update.zip system/usr/keylayout/adp5588_motus.kl 
 unzip -j -o ../../../${DEVICE}_update.zip system/usr/keylayout/headset.kl -d ../../../vendor/motorola/$DEVICE/proprietary/
 unzip -j -o ../../../${DEVICE}_update.zip system/usr/keylayout/motus-kpd.kl -d ../../../vendor/motorola/$DEVICE/proprietary/
 unzip -j -o ../../../${DEVICE}_update.zip system/usr/keylayout/touchscreen.kl -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/lib/libcamera.so -d ../../../vendor/motorola/$DEVICE/proprietary/
 unzip -j -o ../../../${DEVICE}_update.zip system/lib/libmm-qcamera-tgt.so -d ../../../vendor/motorola/$DEVICE/proprietary/
 unzip -j -o ../../../${DEVICE}_update.zip system/lib/libhpprop.so -d ../../../vendor/motorola/$DEVICE/proprietary/
 unzip -j -o ../../../${DEVICE}_update.zip system/lib/libmmjpeg.so -d ../../../vendor/motorola/$DEVICE/proprietary/
@@ -94,6 +93,7 @@ unzip -j -o ../../../${DEVICE}_update.zip system/etc/01_pvplayer_mot.cfg -d ../.
 unzip -j -o ../../../${DEVICE}_update.zip system/etc/wifi/nvram.txt -d ../../../vendor/motorola/$DEVICE/proprietary/
 unzip -j -o ../../../${DEVICE}_update.zip system/etc/pvplayer_mot.cfg -d ../../../vendor/motorola/$DEVICE/proprietary/
 unzip -j -o ../../../${DEVICE}_update.zip system/lib/libloc_api.so -d ../../../vendor/motorola/$DEVICE/proprietary/
+cp libcamera.so ../../../vendor/motorola/$DEVICE/proprietary/
 
 (cat << EOF) | sed s/__DEVICE__/$DEVICE/g > ../../../vendor/$MANUFACTURER/$DEVICE/$DEVICE-vendor-blobs.mk
 # Copyright (C) 2010 The Android Open Source Project

@@ -26,7 +26,7 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
 PRODUCT_COPY_FILES += \
     device/motorola/motus/init.motus.rc:root/init.motus.rc \
-    device/motorola/motus/charge_only_mode:root/charge_only_mode
+    device/motorola/motus/charge_only_mode:root/sbin/charge_only_mode
 
 ## (3)  Finally, the least specific parts, i.e. the non-GSM-specific aspects
 PRODUCT_PROPERTY_OVERRIDES += \
