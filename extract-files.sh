@@ -115,7 +115,7 @@ adb pull /system/lib/libloc_api.so ../../../vendor/motorola/$DEVICE/proprietary
 PRODUCT_COPY_FILES := \\
     vendor/motorola/__DEVICE__/proprietary/libloc_api.so:obj/lib/libloc_api.so \\
     vendor/motorola/__DEVICE__/proprietary/libcamera.so:obj/lib/libcamera.so \\
-    vendor/motorola/__DEVICE__/proprietary/libril-qc-1.so:obj/lib/libril-qc-1.so \\
+    vendor/motorola/__DEVICE__/proprietary/libril-qc-1.so:obj/lib/libril-qc-1.so
 
 # All the blobs necessary for motus
 PRODUCT_COPY_FILES += \\
