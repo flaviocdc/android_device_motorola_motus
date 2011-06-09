@@ -24,6 +24,11 @@ on boot
 
     mkdir /data/misc/wifi 0770 wifi wifi
     mkdir /data/misc/wifi/sockets 0770 wifi wifi
+
+    # remove leftovers
+    exec rm /data/misc/dhcp/dhcpcd-eth0.lease
+    exec rm /data/misc/dhcp/dhcpcd-eth0.pid
+
     mkdir /data/misc/dhcp 0770 dhcp dhcp
     mkdir /data/misc/cal 0770 system system
     mkdir /data/radio 0770 radio radio
