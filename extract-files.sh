@@ -101,7 +101,6 @@ adb pull /system/etc/01_pvplayer_mot.cfg ../../../vendor/motorola/$DEVICE/propri
 adb pull /system/etc/wifi/nvram.txt ../../../vendor/motorola/$DEVICE/proprietary/
 adb pull /system/etc/pvplayer_mot.cfg ../../../vendor/motorola/$DEVICE/proprietary/
 adb pull /system/lib/libloc_api.so ../../../vendor/motorola/$DEVICE/proprietary
-cp libcamera.so ../../../vendor/motorola/$DEVICE/proprietary/
 
 (cat << EOF) | sed s/__DEVICE__/$DEVICE/g > ../../../vendor/motorola/$DEVICE/$DEVICE-vendor-blobs.mk
 # Copyright (C) 2010 The Android Open Source Project
@@ -123,8 +122,7 @@ cp libcamera.so ../../../vendor/motorola/$DEVICE/proprietary/
 # Prebuilt libraries that are needed to build open-source libraries
 PRODUCT_COPY_FILES := \\
     vendor/motorola/__DEVICE__/proprietary/libloc_api.so:obj/lib/libloc_api.so \\
-    vendor/motorola/__DEVICE__/proprietary/libcamera.so:obj/lib/libcamera.so \\
-    vendor/motorola/__DEVICE__/proprietary/libril-qc-1.so:obj/lib/libril-qc-1.so
+    vendor/motorola/__DEVICE__/proprietary/libril-qc-1.so:obj/lib/libril-qc-1.so \\
 
 # All the blobs necessary for motus
 PRODUCT_COPY_FILES += \\
@@ -188,7 +186,6 @@ PRODUCT_COPY_FILES += \\
     vendor/motorola/__DEVICE__/proprietary/libmm-qcamera-tgt.so:system/lib/libmm-qcamera-tgt.so \\
     vendor/motorola/__DEVICE__/proprietary/libmmjpeg.so:system/lib/libmmjpeg.so \\
     vendor/motorola/__DEVICE__/proprietary/libhpprop.so:system/lib/libhpprop.so \\
-    vendor/motorola/__DEVICE__/proprietary/libcamera.so:system/lib/libcamera.so \\
     vendor/motorola/__DEVICE__/proprietary/libomx_sharedlibrary_qc.so:system/lib/libomx_sharedlibrary_qc.so \\
     vendor/motorola/__DEVICE__/proprietary/libomx_wmadec_sharedlibrary.so:system/lib/libomx_wmadec_sharedlibrary.so \\
     vendor/motorola/__DEVICE__/proprietary/libomx_wmvdec_sharedlibrary.so:system/lib/libomx_wmvdec_sharedlibrary.so \\
