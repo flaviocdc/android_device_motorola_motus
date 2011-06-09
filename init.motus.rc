@@ -220,6 +220,23 @@ service fuel_gauge /system/bin/fuel_gauge --all
 service qmuxd /system/bin/qmuxd
     oneshot
 
+service dhcpcd_eth0 /system/bin/dhcpcd -ABKL -d eth0
+   #user system #- this makes socket() calls fail with permission denied
+   group dhcp
+   disabled
+   oneshot
+ 
+service iprenew_eth0 /system/bin/dhcpcd -n
+   group dhcp
+   disabled
+   oneshot
+
+service autoip /system/bin/dhcpcd -B -d eth0
+   #user system  #- this makes socket() calls fail with permission denied
+   group dhcp
+   disabled
+   oneshot
+
 service wpa_supplicant /system/bin/wpa_supplicant  -Dwext -ieth0 -c/data/misc/wifi/wpa_supplicant.conf
 #       user system - this makes socket() calls fail with permission denied
 #    group wifi system
