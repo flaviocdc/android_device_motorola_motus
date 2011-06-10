@@ -252,7 +252,7 @@ service dhcpcd /system/bin/dhcpcd -ABKL
     oneshot
 
 #bluetooth 
-service hciattach /system/bin/brcm_patchram_plus --enable_hci --baudrate 3000000  --patchram /system/etc/firmware/bcm4325.hcd /dev/ttyHS0
+service hciattach /system/bin/brcm_patchram_plus --enable_hci --baudrate 3000000  --patchram /system/etc/BCM4325D1_004.002.004.0218.0225.hcd /dev/ttyHS0
     user bluetooth
     group bluetooth net_bt_admin net_admin net_raw misc
     disabled
