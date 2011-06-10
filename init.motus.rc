@@ -248,7 +248,7 @@ on boot
 service akmd2 /system/bin/akmd2 -f /system/etc/akm/akmd_set.cfg
     user system
     group misc input compass system
-    oneshotqmuxd
+    oneshot
 
 ## TCMD
 #service tcmd /system/bin/tcmd_engine usb0
