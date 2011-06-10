@@ -28,8 +28,8 @@ mobiledata.interfaces=rmnet0
 ro.opengles.version=65537
 debug.sf.hw=1
 
-# This is a high density device with more memory, so larger vm heaps for it.
-dalvik.vm.heapsize=32m
+# This is a not a device with a high amount of memory. Therefore we give a lower vm heapsize.
+dalvik.vm.heapsize=16m
 
 # Increase SKIA decode memory capability for progressive jpg file
 ro.media.dec.jpeg.memcap=20000000

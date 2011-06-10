@@ -25,7 +25,7 @@ on boot
     mkdir /data/misc/wifi 0770 wifi wifi
     mkdir /data/misc/wifi/sockets 0770 wifi wifi
 
-    # remove leftovers
+# remove leftovers
     exec rm /data/misc/dhcp/dhcpcd-eth0.lease
     exec rm /data/misc/dhcp/dhcpcd-eth0.pid
 
@@ -33,7 +33,7 @@ on boot
     mkdir /data/misc/cal 0770 system system
     mkdir /data/radio 0770 radio radio
 
-    # bluetooth power up/down interface
+# bluetooth power up/down interface
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
     chmod 0660                /sys/class/rfkill/rfkill0/state
@@ -49,22 +49,31 @@ on boot
     chmod 0664 /dev/video20
     symlink /dev/graphics/fb0 /dev/fb0
     chmod 0666 /dev/graphics/fb0
-    #  E-compass
+    exec chown bluetooth bluetooth /proc/bt_power
+    chmod 0666 /proc/bt_power
+
+
+# Reboot to recovery
+    chown system system /dev/mtd/mtd3
+
+#  E-compass
     chown system system /dev/akm8973_aot
     chown system system /dev/akm8973_dev
     chmod 0640 /dev/akm8973_dev
-    # proximity
+
+# proximity
     chown system system /sys/devices/platform/sfh7743.-2/proximity
     symlink /sys/devices/platform/sfh7743.-2/proximity /dev/proximity
-    # radio
+
+# radio
     chown root radio /proc/cmdline
 
-    #laptop mode
+#laptop mode
     write /proc/sys/vm/dirty_writeback_centisecs 60000
     write /proc/sys/vm/dirty_expire_centisecs 60000
     write /proc/sys/vm/laptop_mode 5
 
-    # wakelocks
+# wakelocks
     chown radio system /sys/android_power/state
     chown radio system /sys/android_power/request_state
     chown radio system /sys/android_power/acquire_full_wake_lock
@@ -114,9 +123,6 @@ on boot
     chmod 0660 /dev/smdcntl1
     chmod 0660 /dev/smdcntl2
 
-# sdcard performance adjustment
-    write /sys/block/mmcblk0/bdi/read_ahead_kb 4096
-
 # Vibrator
     chown system system /sys/class/vibrator/vibrator/enable
     chmod 0664 /sys/class/vibrator/vibrator/enable
@@ -133,6 +139,10 @@ on boot
     chmod 0664 /dev/accelerometer
     chown system system /dev/lis331dlh
     chmod 0664 /dev/lis331dlh
+
+# hw accel
+    symlink /dev/msm_hw3dc /dev/hw3dc
+    symlink /dev/msm_hw3dm /dev/hw3dm
 
 # Touchpad
     chown system input /dev/touchpad
@@ -162,7 +172,7 @@ on boot
     chmod 0660 /dev/misc_helper
     chmod 0644 /dev/block/mmcblk0p1
 
-# Permissions needed for /port_bridge
+# Permissions needed for port_bridge
     chown root system /dev/ttyHSUSB0
     chmod 0660 /dev/ttyHSUSB0
 
@@ -179,7 +189,7 @@ on boot
     chown system system /sys/kernel/ipv4/tcp_rmem_max
 
 
-    # cpufreq configurations
+# cpufreq configurations
     chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
     chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
     chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
@@ -189,17 +199,17 @@ on boot
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 528000
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor smartass
 
-    # lowmemkiller adjustments   
+# lowmemkiller adjustments   
     write /sys/module/lowmemorykiller/parameters/adj 0,1,2,7,14,15
 
     write /proc/sys/vm/overcommit_memory 1
     write /proc/sys/vm/min_free_order_shift 4
     write /sys/module/lowmemorykiller/parameters/minfree 1536,2048,4096,5120,5632,6144
 
-    # Set init its forked children's oom_adj.
+# Set init its forked children's oom_adj.
     write /proc/1/oom_adj -16
 
-    # Tweak background writeout
+# Tweak background writeout
     write /proc/sys/vm/dirty_expire_centisecs 200
     write /proc/sys/vm/dirty_background_ratio  5
 
@@ -212,10 +222,6 @@ service akmd2 /system/bin/akmd2 -f /system/etc/akm/akmd_set.cfg
 
 ## TCMD
 #service tcmd /system/bin/tcmd_engine usb0
-
-
-#service port_bridge /system/bin/port_bridge /dev/smd0 /dev/ttyHSUSB0
-#    oneshot
 
 service fuel_gauge /system/bin/fuel_gauge --all
     oneshot
@@ -256,6 +262,20 @@ service hciattach /system/bin/brcm_patchram_plus --enable_hci --baudrate 3000000
     user bluetooth
     group bluetooth net_bt_admin net_admin net_raw misc
     disabled
+
+service hcid /system/bin/hcid -s -n -f /etc/bluez/hcid.conf
+    class BT
+    socket bluetooth stream 660 bluetooth bluetooth
+    socket dbus_bluetooth stream 660 bluetooth bluetooth
+    # init.rc does not yet support applying capabilities, so run as root and
+    # let hcid drop uid to bluetooth with the right linux capabilities
+    group bluetooth net_bt_admin misc
+    disabled
+
+service port_bridge /system/bin/port_bridge /dev/smd0 /dev/ttyHSUSB0
+	user radio
+	group system
+    class TCMD
 
 service btenable /system/xbin/busybox sh /system/bin/btenable.sh
     oneshot
