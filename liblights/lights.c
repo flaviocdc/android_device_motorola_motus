@@ -77,12 +77,6 @@ char const*const AMBER_BLINK_FILE
 char const*const KEYBOARD_FILE
         = "/sys/class/leds/keyboard-tcmd/brightness";
 
-char const*const KEYBOARD_ALPHA_FILE
-        = "/sys/class/leds/keyboard1-backlight/brightness";
-
-char const*const KEYBOARD_SYM_FILE
-        = "/sys/class/leds/keyboard2-backlight/brightness";
-
 char const*const BUTTON_FILE
         = "/sys/class/leds/button-backlight/brightness";
 

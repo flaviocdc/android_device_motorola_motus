@@ -28,7 +28,6 @@ on boot
 # remove leftovers
     exec rm /data/misc/dhcp/dhcpcd-eth0.lease
     exec rm /data/misc/dhcp/dhcpcd-eth0.pid
-
     mkdir /data/misc/dhcp 0770 dhcp dhcp
     mkdir /data/misc/cal 0770 system system
     mkdir /data/radio 0770 radio radio
@@ -49,14 +48,17 @@ on boot
     chmod 0664 /dev/video20
     symlink /dev/graphics/fb0 /dev/fb0
     chmod 0666 /dev/graphics/fb0
-    exec chown bluetooth bluetooth /proc/bt_power
-    chmod 0666 /proc/bt_power
 
+# Broadcom stuff
+    chown bluetooth bluetooth /sys/module/board_motus/parameters/bluetooth_power_on
+    chmod 0660 /sys/module/board_motus/parameters/bluetooth_power_on
+    chown bluetooth bluetooth /proc/bt_power
+    chmod 0666 /proc/bt_power
 
 # Reboot to recovery
     chown system system /dev/mtd/mtd3
 
-#  E-compass
+# E-compass
     chown system system /dev/akm8973_aot
     chown system system /dev/akm8973_dev
     chmod 0640 /dev/akm8973_dev
@@ -68,9 +70,7 @@ on boot
 # radio
     chown root radio /proc/cmdline
 
-#laptop mode
-    write /proc/sys/vm/dirty_writeback_centisecs 60000
-    write /proc/sys/vm/dirty_expire_centisecs 60000
+# laptop mode
     write /proc/sys/vm/laptop_mode 5
 
 # wakelocks
@@ -106,14 +106,11 @@ on boot
     chown system system /sys/class/leds/soc/blink
     chown system system /dev/als
     chmod 0664 /dev/als
-    chown system system /sys/module/sco/parameters/disable_esco
-    chown system system /sys/kernel/ipv4/tcp_rmem_max
     chown system system /dev/proximity
     chmod 0644 /dev/proximity
     chown root radio /proc/cmdline
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
     chown bluetooth bluetooth /proc/bluetooth/sleep/proto
-    chown system system /sys/module/sco/parameters/disable_esco
     chmod 0660 /sys/module/bluetooth_power/parameters/power
     chmod 0660 /proc/bluetooth/sleep/proto
     chown bluetooth bluetooth /dev/ttyHS0
@@ -155,7 +152,6 @@ on boot
 # Camera LED brightness attributes accessible to all
     chown system camera /sys/devices/platform/flashlight.0/leds/flashlight/brightness
     chmod 0660 /sys/devices/platform/flashlight.0/leds/flashlight/brightness
-
     chmod 0666 /sys/class/leds/flashlight/brightness
     chmod 0666 /sys/class/leds/cam-torch/brightness
     chown system system /sys/devices/platform/camera-led.0/leds/cam-torch
@@ -274,7 +270,7 @@ service btenable /system/xbin/busybox sh /system/bin/btenable.sh
     oneshot
 
 # Turn on keyboard backlight
-exec /system/xbin/busybox sh /system/bin/kblight_enable.sh
+service kblight_enable /system/xbin/busybox sh /system/bin/kblight_enable.sh
     oneshot
 
 # Set RIL
