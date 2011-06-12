@@ -67,24 +67,10 @@ on boot
     chown system system /sys/devices/platform/sfh7743.-2/proximity
     symlink /sys/devices/platform/sfh7743.-2/proximity /dev/proximity
 
-# radio
-    chown root radio /proc/cmdline
-
 # laptop mode
     write /proc/sys/vm/laptop_mode 5
 
 # wakelocks
-    chown radio system /sys/android_power/state
-    chown radio system /sys/android_power/request_state
-    chown radio system /sys/android_power/acquire_full_wake_lock
-    chown radio system /sys/android_power/acquire_partial_wake_lock
-    chown radio system /sys/android_power/release_wake_lock
-    chown radio system /sys/power/state
-    chown radio system /sys/power/wake_lock
-    chown radio system /sys/power/wake_unlock
-    chmod 0664 /sys/power/state
-    chmod 0660 /sys/power/wake_lock
-    chmod 0660 /sys/power/wake_unlock
     setprop hw.keyboards.0.devname adp5588_motus
     chown system camera /sys/class/leds/flashlight/brightness
     chown system system /sys/class/leds/keyboard-backlight/brightness
@@ -108,7 +94,6 @@ on boot
     chmod 0664 /dev/als
     chown system system /dev/proximity
     chmod 0644 /dev/proximity
-    chown root radio /proc/cmdline
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
     chown bluetooth bluetooth /proc/bluetooth/sleep/proto
     chmod 0660 /sys/module/bluetooth_power/parameters/power
@@ -176,15 +161,6 @@ on boot
     write /data/bluedroid_ref 123456
     chmod 0777 /data/bluedroid_ref
 
-    chown system system /sys/module/sco/parameters/disable_esco
-    chown system system /sys/kernel/ipv4/tcp_wmem_min
-    chown system system /sys/kernel/ipv4/tcp_wmem_def
-    chown system system /sys/kernel/ipv4/tcp_wmem_max
-    chown system system /sys/kernel/ipv4/tcp_rmem_min
-    chown system system /sys/kernel/ipv4/tcp_rmem_def
-    chown system system /sys/kernel/ipv4/tcp_rmem_max
-
-
 # cpufreq configurations
     chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
     chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
@@ -194,14 +170,6 @@ on boot
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 245760
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 528000
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor performance
-
-# Set init its forked children's oom_adj.
-    write /proc/1/oom_adj -16
-
-# Tweak background writeout
-    write /proc/sys/vm/dirty_expire_centisecs 200
-    write /proc/sys/vm/dirty_background_ratio  5
-
 
 # E-Compass  daemon
 service akmd2 /system/bin/akmd2 -f /system/etc/akm/akmd_set.cfg
