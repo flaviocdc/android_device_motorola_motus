@@ -41,13 +41,15 @@ on boot
     chmod 0660 /dev/ttyHS0
     symlink /dev/ttyHS0 /dev/ttyMSM0
     chmod 0666 /dev/msm_snd
+
+# Camera
     chown system camera /dev/msm_camera/msm_camera0
     chown system camera /dev/camera0
     chmod 0664 /dev/camera0
     chown system camera /dev/video20
     chmod 0664 /dev/video20
-    symlink /dev/graphics/fb0 /dev/fb0
-    chmod 0666 /dev/graphics/fb0
+    mkdir /cache/tmp 0666 system system
+    mount tmpfs tmpfs /cache/tmp
 
 # Broadcom stuff
     chown bluetooth bluetooth /sys/module/board_motus/parameters/bluetooth_power_on
@@ -125,6 +127,8 @@ on boot
 # hw accel
     symlink /dev/msm_hw3dc /dev/hw3dc
     symlink /dev/msm_hw3dm /dev/hw3dm
+    chown system graphics /dev/hw3dc
+    chown system graphics /dev/hw3dm
 
 # Touchpad
     chown system input /dev/touchpad
@@ -151,6 +155,8 @@ on boot
     chmod 0660 /dev/blan_enable
     chown system system /dev/misc_helper
     chmod 0660 /dev/misc_helper
+    symlink /dev/graphics/fb0 /dev/fb0
+    chmod 0666 /dev/graphics/fb0
     chmod 0644 /dev/block/mmcblk0p1
 
 # Permissions needed for port_bridge
