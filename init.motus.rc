@@ -22,9 +22,6 @@ on boot
     setkey 0xc0 0x8b 0x707
     setkey 0xc0 0x6b 0x20c
 
-    mkdir /data/misc/wifi 0770 wifi wifi
-    mkdir /data/misc/wifi/sockets 0770 wifi wifi
-
 # remove leftovers
     exec rm /data/misc/dhcp/dhcpcd-eth0.lease
     exec rm /data/misc/dhcp/dhcpcd-eth0.pid
@@ -37,8 +34,6 @@ on boot
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
     chmod 0660                /sys/class/rfkill/rfkill0/state
     chown system system /sys/module/sco/parameters/disable_esco
-    chown bluetooth bluetooth /dev/ttyHS0
-    chmod 0660 /dev/ttyHS0
     symlink /dev/ttyHS0 /dev/ttyMSM0
     chmod 0666 /dev/msm_snd
 
@@ -59,11 +54,6 @@ on boot
 
 # Reboot to recovery
     chown system system /dev/mtd/mtd3
-
-# E-compass
-    chown system system /dev/akm8973_aot
-    chown system system /dev/akm8973_dev
-    chmod 0640 /dev/akm8973_dev
 
 # proximity
     chown system system /sys/devices/platform/sfh7743.-2/proximity
@@ -94,8 +84,6 @@ on boot
     chown system system /sys/class/leds/soc/blink
     chown system system /dev/als
     chmod 0664 /dev/als
-    chown system system /dev/proximity
-    chmod 0644 /dev/proximity
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
     chown bluetooth bluetooth /proc/bluetooth/sleep/proto
     chmod 0660 /sys/module/bluetooth_power/parameters/power
@@ -121,18 +109,10 @@ on boot
     chmod 0664 /sys/class/i2c-adapter/i2c-0/0-0018/mode
     chown system system /dev/accelerometer
     chmod 0664 /dev/accelerometer
-    chown system system /dev/lis331dlh
-    chmod 0664 /dev/lis331dlh
 
 # hw accel
     symlink /dev/msm_hw3dc /dev/hw3dc
     symlink /dev/msm_hw3dm /dev/hw3dm
-    chown system graphics /dev/hw3dc
-    chown system graphics /dev/hw3dm
-
-# Touchpad
-    chown system input /dev/touchpad
-    chmod 0664 /dev/touchpad
 
 # Minipad
     chown system system /dev/minipad
@@ -147,21 +127,8 @@ on boot
     chown system camera /sys/devices/platform/camera-led.0/leds/cam-torch/brightness
     chmod 0660 /sys/devices/platform/camera-led.0/leds/cam-torch/brightness
 
-# Wakelock debug
-#     write /sys/module/wakelock/parameters/debug_mask 7
-
-# Permissions changes needed for TCMD
-    chown system system /dev/blan_enable
-    chmod 0660 /dev/blan_enable
-    chown system system /dev/misc_helper
-    chmod 0660 /dev/misc_helper
+# Copybit
     symlink /dev/graphics/fb0 /dev/fb0
-    chmod 0666 /dev/graphics/fb0
-    chmod 0644 /dev/block/mmcblk0p1
-
-# Permissions needed for port_bridge
-    chown root system /dev/ttyHSUSB0
-    chmod 0660 /dev/ttyHSUSB0
 
 # Clearing FM/BT reference count temp file  contents
     write /data/bluedroid_ref 123456
@@ -241,10 +208,6 @@ service port_bridge /system/bin/port_bridge /dev/smd0 /dev/ttyHSUSB0
     class TCMD
 
 service btenable /system/xbin/busybox sh /system/bin/btenable.sh
-    oneshot
-
-# Turn on keyboard backlight
-service kblight_enable /system/xbin/busybox sh /system/bin/kblight_enable.sh
     oneshot
 
 # Set RIL

@@ -20,7 +20,9 @@
 # port_bridge
 /dev/ttyHSUSB0            0660   root      system
 # touchpad
-/dev/touchpad             0664   system    system
+/dev/touchpad             0664   system    input
+# Minipad
+/dev/minipad              0664   system    system
 
 /dev/block/mmcblk0p1      0644   root      root
 
