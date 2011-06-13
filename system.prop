@@ -3,11 +3,6 @@
 #
 
 sys.motorola.infactory=0
-ro.mot.hw.keypadbl.anim=1
-ro.mot.hw.segmented.kp=0
-ro.mot.hw.tabletop=1
-ro.mot.kb.disp.insync=1
-ro.mot.hw.minipad=1
 
 rild.libpath = /system/lib/libril-qc-1.so
 rild.libargs = -d /dev/smd0
