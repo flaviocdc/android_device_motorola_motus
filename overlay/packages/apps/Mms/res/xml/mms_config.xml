@@ -26,7 +26,7 @@ unknown
 	<string name="userAgent">MotoMB300</string>
 	<string name="uaProfTagName">Profile</string>
 	<string name="uaProfUrl">http://uaprof.motorola.com/phoneconfig/MotoMB300/profile/MotoMB300.rdf</string>
-	<int name="recipientLimit">10</int>
+	<int name="recipientLimit">-1</int>
 	<string name="httpParams">x-up-calling-line-id: 1##LINE1##|X-VzW-MDN: 1##LINE1##</string>
 	<string name="httpParamsLine1Key">##LINE1##</string>
 	<int name="maxImageHeight">1200</int>
