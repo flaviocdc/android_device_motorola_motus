@@ -127,7 +127,7 @@ PRODUCT_COPY_FILES := \\
 
 # All the blobs necessary for motus
 PRODUCT_COPY_FILES += \\
-    vendor/motorola/__DEVICE__/proprietary/akmd2:vendor/bin/akmd2 \\
+    vendor/motorola/__DEVICE__/proprietary/akmd2:system/bin/akmd2 \\
     vendor/motorola/__DEVICE__/proprietary/touchpad:system/bin/touchpad \\
     vendor/motorola/__DEVICE__/proprietary/minipadut:system/bin/minipadut \\
     vendor/motorola/__DEVICE__/proprietary/qmuxd:system/bin/qmuxd \\
@@ -138,7 +138,7 @@ PRODUCT_COPY_FILES += \\
     vendor/motorola/__DEVICE__/proprietary/bt_downloader:system/bin/bt_downloader \\
     vendor/motorola/__DEVICE__/proprietary/bt_init:system/bin/bt_init \\
     vendor/motorola/__DEVICE__/proprietary/bt_init.config:system/etc/bt_init.config \\
-    vendor/motorola/__DEVICE__/proprietary/akmd_set.cfg:system/etc/fuel_gauge/akmd_set.cfg \\
+    vendor/motorola/__DEVICE__/proprietary/akmd_set.cfg:system/etc/akm/akmd_set.cfg \\
     vendor/motorola/__DEVICE__/proprietary/0006.dffs:system/etc/fuel_gauge/0006.dffs \\
     vendor/motorola/__DEVICE__/proprietary/0301.bqfs:system/etc/fuel_gauge/0301.bqfs \\
     vendor/motorola/__DEVICE__/proprietary/minipad.cfg:system/etc/minipad/104/minipad.cfg \\
