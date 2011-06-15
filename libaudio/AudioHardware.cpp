@@ -1094,6 +1094,10 @@ status_t AudioHardware::doRouting(AudioStreamInMSM72xx *input)
             }
             audProcess = (ADRC_ENABLE | EQ_ENABLE | IIR_ENABLE);
         } else {
+            if (mFmRadioEnabled) {
+                LOGI("Routing FM audio to Wired Headset\n");
+                sndDevice = SND_DEVICE_FM_HEADSET;
+            else {
             if (mMode != AudioSystem::MODE_IN_CALL) {
                 LOGI("out-of-call: Routing audio to SND_DEVICE_HANDSET\n");
                 sndDevice  = SND_DEVICE_HANDSET;
