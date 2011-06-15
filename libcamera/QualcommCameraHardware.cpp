@@ -62,11 +62,11 @@ extern "C" {
 #include <stdlib.h>
 #include <poll.h>
 
-#include "msm_camera.h" // Backflip kernel
+#include "msm_camera.h" // Cliq XT kernel
 
 #define REVISION "0.5"
 
-// init for Backflip
+// init for Cliq XT
 #define THUMBNAIL_WIDTH_STR   "192"
 #define THUMBNAIL_HEIGHT_STR  "144"
 // if not set, set them to the following
@@ -1071,8 +1071,6 @@ void QualcommCameraHardware::runJpegEncodeThread(void *data)
     }
 
     int jpeg_quality = mParameters.getInt("jpeg-quality");
-    int wb = ((CAMERA_WB_AUTO == getParm("whitebalance", whitebalance)) ? 0 : 1); // 0 == Auto, 1 == Manual
-    int ledm = ((LED_MODE_OFF == (led_mode_t) getParm("flash-mode", flashmode)) ? 0 : 1); //1 On, 0 Off
 
     // Receive and convert to jpeg internaly, without using privative app
     if (yuv420_save2jpeg((unsigned char*) mJpegHeap->mHeap->base(),
@@ -1082,7 +1080,7 @@ void QualcommCameraHardware::runJpegEncodeThread(void *data)
         LOGE("jpegConvert failed!");
 
     writeExif(mJpegHeap->mHeap->base(), mJpegHeap->mHeap->base(), mJpegSize,
-            &mJpegSize, rotation, npt, wb, ledm);
+            &mJpegSize, rotation, npt);
 
     receiveJpegPicture();
 
@@ -2431,6 +2429,5 @@ status_t QualcommCameraHardware::sendCommand(int32_t command, int32_t arg1,
 }
 
 }; // namespace android
-
 
 
