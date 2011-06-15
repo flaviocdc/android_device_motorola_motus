@@ -15,7 +15,7 @@
 ** limitations under the License.
 **
 **
-** Customizations by _firesnatch_ for the Motorola Cliq XT, Morrison & Motus
+** Customizations by _firesnatch_ for the Motorola Cliq XT
 **
 */
 
@@ -39,7 +39,7 @@
 #define MOT_FEATURE_PLATFORM_ANDROID 1
 
 // hardware specific functions
-// Motorola - Motus volrange is 0-15
+// Motorola - Zeppelin volrange is 0-15
 #define AMSS_VOL_FACTOR 15.0
 
 #include <media/AudioSystem.h>
@@ -910,7 +910,7 @@ status_t AudioHardware::doAudioRouteOrMute(int device)
 #endif
         }
     }
-    // Motorola Motus - two new audio devices for FM
+    // Motorola Zeppelin - two new audio devices for FM
     // unmute ear path for fm device
     if(( device == SND_DEVICE_FM_HEADSET ) || ( device == SND_DEVICE_FM_SPEAKER ))
     {
@@ -928,7 +928,7 @@ status_t AudioHardware::doAudioRouteOrMute(int device)
 
 //
 // MOT_LV
-// MOTUS - new function
+// ZEPPELIN - new function
 int AudioHardware::getHeadsetType()
 {
 
@@ -1093,16 +1093,23 @@ status_t AudioHardware::doRouting(AudioStreamInMSM72xx *input)
                 }
             }
             audProcess = (ADRC_ENABLE | EQ_ENABLE | IIR_ENABLE);
+            audProcess = (ADRC_ENABLE | EQ_ENABLE | IIR_ENABLE);
         } else {
-            if (mMode != AudioSystem::MODE_IN_CALL) {
-                LOGI("out-of-call: Routing audio to SND_DEVICE_HANDSET\n");
-                sndDevice  = SND_DEVICE_HANDSET;
+            if (mFmRadioEnabled) {
+                LOGI("Routing FM audio to Wired Headset\n");
+                sndDevice = SND_DEVICE_FM_HEADSET;
             }
             else {
-                LOGI("in-call: Routing audio to dualmic SND_DEVICE_IN_S_SADC_OUT_HANDSET\n");
-                sndDevice = SND_DEVICE_IN_S_SADC_OUT_HANDSET;
+                if (mMode != AudioSystem::MODE_IN_CALL) {
+                    LOGI("out-of-call: Routing audio to SND_DEVICE_HANDSET\n");
+                    sndDevice  = SND_DEVICE_HANDSET;
+                }
+                else {
+                    LOGI("in-call: Routing audio to dualmic SND_DEVICE_IN_S_SADC_OUT_HANDSET\n");
+                    sndDevice = SND_DEVICE_IN_S_SADC_OUT_HANDSET;
+                }
+                audProcess = (ADRC_ENABLE | EQ_ENABLE | IIR_ENABLE);
             }
-            audProcess = (ADRC_ENABLE | EQ_ENABLE | IIR_ENABLE);
         }
     }
 
