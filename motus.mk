@@ -44,8 +44,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
         ro.url.safetylegal=http://www.motorola.com/staticfiles/Support/legal/?model=MB300 \
         ro.setupwizard.enable_bypass=1 \
         dalvik.vm.lockprof.threshold=500 \
-        dalvik.vm.dexopt-flags=m=y \
-        debug.sf.hw=1 \
         ro.media.dec.aud.wma.enabled=1 \
         ro.media.dec.vid.wmv.enabled=1
 
