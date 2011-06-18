@@ -37,3 +37,6 @@ ro.media.dec.jpeg.memcap=20000000
 # Persist default parameters
 persist.sys.use_dithering=0
 persist.sys.purgeable_assets=1
+
+# Enabling the backtrack
+persist.service.backtrack=1
