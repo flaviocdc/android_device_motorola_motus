@@ -74,20 +74,6 @@ unzip -j -o ../../../${DEVICE}_update.zip system/lib/libOmxH264Dec.so -d ../../.
 unzip -j -o ../../../${DEVICE}_update.zip system/lib/libOmxMpeg4Dec.so -d ../../../vendor/motorola/$DEVICE/proprietary/
 unzip -j -o ../../../${DEVICE}_update.zip system/lib/libOmxVidEnc.so -d ../../../vendor/motorola/$DEVICE/proprietary/
 unzip -j -o ../../../${DEVICE}_update.zip system/lib/libvideotrimer.so -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/usr/keychars/adp5588_motus.kcm.bin -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/usr/keychars/adp5588_motus_P1.kcm.bin -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/usr/keychars/adp5588_motus_P2.kcm.bin -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/usr/keychars/adp5588_motus_P3.kcm.bin -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/usr/keychars/qwerty.kcm.bin -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/usr/keychars/qwerty2.kcm.bin -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/usr/keylayout/adp5588_motus.kl -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/usr/keylayout/adp5588_motus_P1.kl -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/usr/keylayout/adp5588_motus_P2.kl -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/usr/keylayout/adp5588_motus_P3.kl -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/usr/keylayout/headset.kl -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/usr/keylayout/motus-kpd.kl -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/usr/keylayout/qwerty.kl -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/usr/keylayout/touchscreen.kl -d ../../../vendor/motorola/$DEVICE/proprietary/
 unzip -j -o ../../../${DEVICE}_update.zip system/lib/libmm-qcamera-tgt.so -d ../../../vendor/motorola/$DEVICE/proprietary/
 unzip -j -o ../../../${DEVICE}_update.zip system/lib/libhpprop.so -d ../../../vendor/motorola/$DEVICE/proprietary/
 unzip -j -o ../../../${DEVICE}_update.zip system/lib/libmmjpeg.so -d ../../../vendor/motorola/$DEVICE/proprietary/
@@ -172,20 +158,6 @@ PRODUCT_COPY_FILES += \\
     vendor/motorola/__DEVICE__/proprietary/libOmxMpeg4Dec.so:system/lib/libOmxMpeg4Dec.so \\
     vendor/motorola/__DEVICE__/proprietary/libOmxVidEnc.so:system/lib/libOmxVidEnc.so \\
     vendor/motorola/__DEVICE__/proprietary/libvideotrimer.so:system/lib/libvideotrimer.so \\
-    vendor/motorola/__DEVICE__/proprietary/adp5588_motus.kcm.bin:system/usr/keychars/adp5588_motus.kcm.bin \\
-    vendor/motorola/__DEVICE__/proprietary/adp5588_motus_P1.kcm.bin:system/usr/keychars/adp5588_motus_P1.kcm.bin \\
-    vendor/motorola/__DEVICE__/proprietary/adp5588_motus_P2.kcm.bin:system/usr/keychars/adp5588_motus_P2.kcm.bin \\
-    vendor/motorola/__DEVICE__/proprietary/adp5588_motus_P3.kcm.bin:system/usr/keychars/adp5588_motus_P3.kcm.bin \\
-    vendor/motorola/__DEVICE__/proprietary/qwerty.kcm.bin:system/usr/keychars/qwerty.kcm.bin \\
-    vendor/motorola/__DEVICE__/proprietary/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin \\
-    vendor/motorola/__DEVICE__/proprietary/adp5588_motus.kl:system/usr/keylayout/adp5588_motus.kl \\
-    vendor/motorola/__DEVICE__/proprietary/adp5588_motus_P1.kl:system/usr/keylayout/adp5588_motus_P1.kl \\
-    vendor/motorola/__DEVICE__/proprietary/adp5588_motus_P2.kl:system/usr/keylayout/adp5588_motus_P2.kl \\
-    vendor/motorola/__DEVICE__/proprietary/adp5588_motus_P3.kl:system/usr/keylayout/adp5588_motus_P3.kl \\
-    vendor/motorola/__DEVICE__/proprietary/headset.kl:system/usr/keylayout/headset.kl \\
-    vendor/motorola/__DEVICE__/proprietary/motus-kpd.kl:system/usr/keylayout/motus-kpd.kl \\
-    vendor/motorola/__DEVICE__/proprietary/qwerty.kl:system/usr/keylayout/qwerty.kl \\
-    vendor/motorola/__DEVICE__/proprietary/touchscreen.kl:system/usr/keylayout/touchscreen.kl \\
     vendor/motorola/__DEVICE__/proprietary/libmm-qcamera-tgt.so:system/lib/libmm-qcamera-tgt.so \\
     vendor/motorola/__DEVICE__/proprietary/libmmjpeg.so:system/lib/libmmjpeg.so \\
     vendor/motorola/__DEVICE__/proprietary/libhpprop.so:system/lib/libhpprop.so \\

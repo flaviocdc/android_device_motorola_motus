@@ -100,6 +100,23 @@ PRODUCT_COPY_FILES += \
     device/motorola/motus/touchpad.cfg:system/etc/touchpad/50/touchpad.cfg \
     device/motorola/motus/touchpad.enc:system/etc/touchpad/50/touchpad.enc
 
+# Keylayouts & keychars
+PRODUCT_COPY_FILES += \
+    device/motorola/motus/keychars/adp5588_motus.kcm.bin:system/usr/keychars/adp5588_motus.kcm.bin \
+    device/motorola/motus/keychars/adp5588_motus_P1.kcm.bin:system/usr/keychars/adp5588_motus_P1.kcm.bin \
+    device/motorola/motus/keychars/adp5588_motus_P2.kcm.bin:system/usr/keychars/adp5588_motus_P2.kcm.bin \
+    device/motorola/motus/keychars/adp5588_motus_P3.kcm.bin:system/usr/keychars/adp5588_motus_P3.kcm.bin \
+    device/motorola/motus/keychars/qwerty.kcm.bin:system/usr/keychars/qwerty.kcm.bin \
+    device/motorola/motus/keychars/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin \
+    device/motorola/motus/keylayout/adp5588_motus.kl:system/usr/keylayout/adp5588_motus.kl \
+    device/motorola/motus/keylayout/adp5588_motus_P1.kl:system/usr/keylayout/adp5588_motus_P1.kl \
+    device/motorola/motus/keylayout/adp5588_motus_P2.kl:system/usr/keylayout/adp5588_motus_P2.kl \
+    device/motorola/motus/keylayout/adp5588_motus_P3.kl:system/usr/keylayout/adp5588_motus_P3.kl \
+    device/motorola/motus/keylayout/headset.kl:system/usr/keylayout/headset.kl \
+    device/motorola/motus/keylayout/motus-kpd.kl:system/usr/keylayout/motus-kpd.kl \
+    device/motorola/motus/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
+    device/motorola/motus/keylayout/touchscreen.kl:system/usr/keylayout/touchscreen.kl
+
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 LOCAL_KERNEL := device/motorola/motus/kernel
 else
