@@ -31,13 +31,9 @@ PRODUCT_COPY_FILES += \
 
 ## (3)  Finally, the least specific parts, i.e. the non-GSM-specific aspects
 PRODUCT_PROPERTY_OVERRIDES += \
-        ro.com.android.wifi-watchlist=GoogleGuest \
         ro.error.receiver.system.apps=com.google.android.feedback \
-        ro.setupwizard.enterprise_mode=1 \
         ro.com.google.clientidbase=android-att-us \
         ro.com.google.locationfeatures=1 \
-        ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
-        ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
         ro.config.vc_call_vol_steps=7 \
         ro.telephony.call_ring.multiple=false \
         ro.telephony.call_ring.delay=1000 \
