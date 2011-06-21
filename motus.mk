@@ -131,7 +131,7 @@ $(call inherit-product-if-exists, vendor/motorola/motus/motus-vendor.mk)
 PRODUCT_COPY_FILES += \
     device/motorola/motus/media_profiles.xml:/system/etc/media_profiles.xml \
     device/motorola/motus/sysctl.conf:system/etc/sysctl.conf \
-    device/motorola/motus/disable-notification-led.sh:system/init.d/70disable-notification-led
+    device/motorola/motus/disable-notification-led.sh:system/etc/init.d/70disable-notification-led
 
 $(call inherit-product, build/target/product/full_base.mk)
 
