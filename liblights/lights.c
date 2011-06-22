@@ -75,7 +75,7 @@ char const*const AMBER_BLINK_FILE
         = "/sys/class/leds/amber/blink";
 
 char const*const KEYBOARD_FILE
-        = "/sys/class/leds/keyboard-tcmd/brightness";
+        = "/sys/class/leds/keyboard-backlight/brightness";
 
 char const*const BUTTON_FILE
         = "/sys/class/leds/button-backlight/brightness";
@@ -211,7 +211,7 @@ set_light_keyboard_alpha_seg(struct light_device_t* dev,
     int err = 0;
     int on = is_lit(state);
     pthread_mutex_lock(&g_lock);
-    err = write_int("/sys/class/leds/keyboard1-backlight/brightness", on?255:0);
+    err = write_int("/sys/class/leds/keyboard-backlight/brightness", on?255:0);
     pthread_mutex_unlock(&g_lock);
     return err;
 }
@@ -225,7 +225,7 @@ set_light_keyboard_symbols_seg(struct light_device_t* dev,
     int err = 0;
     int on = is_lit(state);
     pthread_mutex_lock(&g_lock);
-    err = write_int("/sys/class/leds/keyboard2-backlight/brightness", on?255:0);
+    err = write_int("/sys/class/leds/keyboard-backlight/brightness", on?255:0);
     pthread_mutex_unlock(&g_lock);
     return err;
 }
