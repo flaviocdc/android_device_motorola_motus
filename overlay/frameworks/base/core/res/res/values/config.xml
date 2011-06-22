@@ -246,12 +246,9 @@
 
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
-        <!--<item>20</item>
+        <item>20</item>
         <item>100</item>
-        <item>1500</item>-->
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
+        <item>1500</item>
     </integer-array>
 
     <!-- Array of output values for LCD backlight corresponding to the LUX values
@@ -271,8 +268,8 @@
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessButtonBacklightValues">
         <item>255</item>
-        <item>160</item>
-        <item>70</item>
+        <item>255</item>
+        <item>0</item>
         <item>0</item>
     </integer-array>
 
@@ -282,8 +279,8 @@
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessKeyboardBacklightValues">
         <item>255</item>
-        <item>160</item>
-        <item>70</item>
+        <item>255</item>
+        <item>0</item>
         <item>0</item>
     </integer-array>
 
@@ -338,8 +335,17 @@
     <integer name="config_datause_notification_type">2</integer>
 
     <!-- Allows the light sensor to be ignored when flashlight is on -->
-    <bool name="config_flashlight_affects_lightsensor">true</bool>
+    <bool name="config_flashlight_affects_lightsensor">false</bool>
 
-    <bool name="config_animateScreenLights">false</bool>
+    <!-- Enable the screen-on animation -->
+    <bool name="config_enableScreenOnAnimation">false</bool>
+
+    <!-- Enable the screen-off animation -->
+    <bool name="config_enableScreenOffAnimation">true</bool>
+
+    <!-- If this is true, the screen will fade off. -->
+    <bool name="config_animateScreenLights">true</bool>
+
+    <!-- Set this to true to get data working on some Motorola phones -->
     <bool name="config_rilNeedsNullPath">true</bool>
 </resources>
