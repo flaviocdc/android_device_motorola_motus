@@ -88,14 +88,6 @@ PRODUCT_LOCALES += mdpi
 PRODUCT_COPY_FILES += \
     device/motorola/motus/vold.fstab:system/etc/vold.fstab
 
-PRODUCT_COPY_FILES += \
-    device/motorola/motus/btenable.sh:system/bin/btenable.sh \
-    device/motorola/motus/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
-    device/motorola/motus/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf \
-    device/motorola/motus/saveconfig.cfg:system/etc/touchpad/50/saveconfig.cfg \
-    device/motorola/motus/touchpad.cfg:system/etc/touchpad/50/touchpad.cfg \
-    device/motorola/motus/touchpad.enc:system/etc/touchpad/50/touchpad.enc
-
 # Keylayouts & keychars
 PRODUCT_COPY_FILES += \
     device/motorola/motus/keychars/adp5588_motus.kcm.bin:system/usr/keychars/adp5588_motus.kcm.bin \
@@ -129,6 +121,7 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product-if-exists, vendor/motorola/motus/motus-vendor.mk)
 
 PRODUCT_COPY_FILES += \
+    device/motorola/motus/btenable.sh:system/bin/btenable.sh \
     device/motorola/motus/media_profiles.xml:/system/etc/media_profiles.xml \
     device/motorola/motus/sysctl.conf:system/etc/sysctl.conf \
     device/motorola/motus/disable-notification-led.sh:system/etc/init.d/70disable-notification-led

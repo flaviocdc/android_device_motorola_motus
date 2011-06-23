@@ -20,76 +20,78 @@ DEVICE=motus
 MANUFACTURER=motorola
 
 mkdir -p ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-unzip -j -o ../../../${DEVICE}_update.zip system/bin/akmd2 -d ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/bin/akmd2 -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 chmod 755 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/akmd2
-unzip -j -o ../../../${DEVICE}_update.zip system/bin/touchpad -d ../../../vendor/motorola/$DEVICE/proprietary/
-chmod 755 ../../../vendor/motorola/$DEVICE/proprietary/touchpad
-unzip -j -o ../../../${DEVICE}_update.zip system/bin/minipadut -d ../../../vendor/motorola/$DEVICE/proprietary/
-chmod 755 ../../../vendor/motorola/$DEVICE/proprietary/minipadut
-unzip -j -o ../../../${DEVICE}_update.zip system/bin/qmuxd -d ../../../vendor/motorola/$DEVICE/proprietary/
-chmod 755 ../../../vendor/motorola/$DEVICE/proprietary/qmuxd
-unzip -j -o ../../../${DEVICE}_update.zip system/bin/fuel_gauge -d ../../../vendor/motorola/$DEVICE/proprietary/
-chmod 755 ../../../vendor/motorola/$DEVICE/proprietary/fuel_gauge
-unzip -j -o ../../../${DEVICE}_update.zip system/bin/port_bridge -d ../../../vendor/motorola/$DEVICE/proprietary/
-chmod 755 ../../../vendor/motorola/$DEVICE/proprietary/port_bridge
-unzip -j -o ../../../${DEVICE}_update.zip system/bin/tcmd_engine -d ../../../vendor/motorola/$DEVICE/proprietary/
-chmod 755 ../../../vendor/motorola/$DEVICE/proprietary/tcmd_engine
-unzip -j -o ../../../${DEVICE}_update.zip system/bin/tcmd_sql -d ../../../vendor/motorola/$DEVICE/proprietary/
-chmod 755 ../../../vendor/motorola/$DEVICE/proprietary/tcmd_sql
-unzip -j -o ../../../${DEVICE}_update.zip system/bin/bt_downloader -d ../../../vendor/motorola/$DEVICE/proprietary/
-chmod 755 ../../../vendor/motorola/$DEVICE/proprietary/bt_downloader
-unzip -j -o ../../../${DEVICE}_update.zip system/bin/bt_init -d ../../../vendor/motorola/$DEVICE/proprietary/
-chmod 755 ../../../vendor/motorola/$DEVICE/proprietary/bt_init
-unzip -j -o ../../../${DEVICE}_update.zip system/etc/akm/akmd_set.cfg -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/etc/fuel_gauge/0006.dffs -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/etc/fuel_gauge/0301.bqfs -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/etc/minipad/104/minipad.cfg -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/etc/minipad/104/minipad.enc -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/etc/minipad/104/saveconfig.cfg -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/etc/bt_init.config -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/etc/AudioFilter.csv -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/etc/AudioPara4.csv -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/etc/BCM4325D1_004.002.004.0218.0225.hcd -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/etc/wifi/sdio-g-cdc-reclaim-wme.bin -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/lib/egl/libGLES_qcom.so -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/lib/libaudioeq.so -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/lib/libril-qc-1.so -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/lib/libril-moto-umts-1.so -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/lib/libqmi.so -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/lib/libwmsts.so -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/lib/libcm.so -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/lib/libnv.so -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/lib/libdss.so -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/lib/libdsm.so -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/lib/libmmgsdilib.so -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/lib/libgsdi_exp.so -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/lib/libgstk_exp.so -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/lib/libwms.so -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/lib/libmm-adspsvc.so -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/lib/liboncrpc.so -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/lib/libqueue.so -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/lib/libsnd.so -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/lib/libmmcamera.so -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/lib/libOmxH264Dec.so -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/lib/libOmxMpeg4Dec.so -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/lib/libOmxVidEnc.so -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/lib/libvideotrimer.so -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/lib/libmm-qcamera-tgt.so -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/lib/libhpprop.so -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/lib/libmmjpeg.so -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/lib/libomx_sharedlibrary_qc.so -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/lib/libomx_wmadec_sharedlibrary.so -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/lib/libOmxMp3Dec.so -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/lib/libomx_wmvdec_sharedlibrary.so -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/lib/libopencore_motlocal.so -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/lib/libopencore_motlocalreg.so -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/lib/libspeech.so -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/etc/01_pvplayer_mot.cfg -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/etc/wifi/nvram.txt -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/etc/pvplayer_mot.cfg -d ../../../vendor/motorola/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/lib/libloc_api.so -d ../../../vendor/motorola/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/bin/touchpad -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+chmod 755 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/touchpad
+unzip -j -o ../../../${DEVICE}_update.zip system/bin/minipadut -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+chmod 755 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/minipadut
+unzip -j -o ../../../${DEVICE}_update.zip system/bin/qmuxd -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+chmod 755 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/qmuxd
+unzip -j -o ../../../${DEVICE}_update.zip system/bin/fuel_gauge -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+chmod 755 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/fuel_gauge
+unzip -j -o ../../../${DEVICE}_update.zip system/bin/port_bridge -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+chmod 755 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/port_bridge
+unzip -j -o ../../../${DEVICE}_update.zip system/bin/tcmd_engine -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+chmod 755 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/tcmd_engine
+unzip -j -o ../../../${DEVICE}_update.zip system/bin/tcmd_sql -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+chmod 755 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/tcmd_sql
+unzip -j -o ../../../${DEVICE}_update.zip system/bin/bt_downloader -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+chmod 755 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bt_downloader
+unzip -j -o ../../../${DEVICE}_update.zip system/bin/bt_init -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+chmod 755 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bt_init
+unzip -j -o ../../../${DEVICE}_update.zip system/etc/dhcpcd/dhcpcd.conf ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/etc/wifi/wpa_supplicant.conf ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/etc/akm/akmd_set.cfg -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/etc/fuel_gauge/0006.dffs -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/etc/fuel_gauge/0301.bqfs -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/etc/minipad/104/minipad.cfg -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/etc/minipad/104/minipad.enc -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/etc/minipad/104/saveconfig.cfg -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/etc/bt_init.config -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/etc/AudioFilter.csv -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/etc/AudioPara4.csv -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/etc/BCM4325D1_004.002.004.0218.0225.hcd -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/etc/wifi/sdio-g-cdc-reclaim-wme.bin -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/egl/libGLES_qcom.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libaudioeq.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libril-qc-1.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libril-moto-umts-1.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libqmi.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libwmsts.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libcm.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libnv.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libdss.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libdsm.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libmmgsdilib.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libgsdi_exp.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libgstk_exp.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libwms.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libmm-adspsvc.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/liboncrpc.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libqueue.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libsnd.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libmmcamera.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libOmxH264Dec.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libOmxMpeg4Dec.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libOmxVidEnc.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libvideotrimer.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libmm-qcamera-tgt.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libhpprop.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libmmjpeg.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libomx_sharedlibrary_qc.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libomx_wmadec_sharedlibrary.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libOmxMp3Dec.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libomx_wmvdec_sharedlibrary.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libopencore_motlocal.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libopencore_motlocalreg.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libspeech.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/etc/01_pvplayer_mot.cfg -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/etc/wifi/nvram.txt -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/etc/pvplayer_mot.cfg -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libloc_api.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 
-(cat << EOF) | sed s/__DEVICE__/$DEVICE/g > ../../../vendor/$MANUFACTURER/$DEVICE/$DEVICE-vendor-blobs.mk
+(cat << EOF) | sed s/__DEVICE__/$DEVICE/g | sed s/__MANUFACTURER__/$MANUFACTURER/g > ../../../vendor/$MANUFACTURER/$DEVICE/device-vendor-blobs.mk
 # Copyright (C) 2010 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -104,73 +106,78 @@ unzip -j -o ../../../${DEVICE}_update.zip system/lib/libloc_api.so -d ../../../v
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# This file is generated by device/motorola/__DEVICE__/extract-files.sh - DO NOT EDIT
+# This file is generated by device/$MANUFACTURER/__DEVICE__/extract-files.sh - DO NOT EDIT
 
 # Prebuilt libraries that are needed to build open-source libraries
 PRODUCT_COPY_FILES := \\
-    vendor/motorola/__DEVICE__/proprietary/libloc_api.so:obj/lib/libloc_api.so \\
-    vendor/motorola/__DEVICE__/proprietary/libril-qc-1.so:obj/lib/libril-qc-1.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libloc_api.so:obj/lib/libloc_api.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libril-qc-1.so:obj/lib/libril-qc-1.so \\
 
 # All the blobs necessary for motus
 PRODUCT_COPY_FILES += \\
-    vendor/motorola/__DEVICE__/proprietary/akmd2:system/bin/akmd2 \\
-    vendor/motorola/__DEVICE__/proprietary/touchpad:system/bin/touchpad \\
-    vendor/motorola/__DEVICE__/proprietary/minipadut:system/bin/minipadut \\
-    vendor/motorola/__DEVICE__/proprietary/qmuxd:system/bin/qmuxd \\
-    vendor/motorola/__DEVICE__/proprietary/fuel_gauge:system/bin/fuel_gauge \\
-    vendor/motorola/__DEVICE__/proprietary/port_bridge:system/bin/port_bridge \\
-    vendor/motorola/__DEVICE__/proprietary/tcmd_engine:system/bin/tcmd_engine \\
-    vendor/motorola/__DEVICE__/proprietary/tcmd_sql:system/bin/tcmd_sql \\
-    vendor/motorola/__DEVICE__/proprietary/bt_downloader:system/bin/bt_downloader \\
-    vendor/motorola/__DEVICE__/proprietary/bt_init:system/bin/bt_init \\
-    vendor/motorola/__DEVICE__/proprietary/bt_init.config:system/etc/bt_init.config \\
-    vendor/motorola/__DEVICE__/proprietary/akmd_set.cfg:system/etc/akm/akmd_set.cfg \\
-    vendor/motorola/__DEVICE__/proprietary/0006.dffs:system/etc/fuel_gauge/0006.dffs \\
-    vendor/motorola/__DEVICE__/proprietary/0301.bqfs:system/etc/fuel_gauge/0301.bqfs \\
-    vendor/motorola/__DEVICE__/proprietary/minipad.cfg:system/etc/minipad/104/minipad.cfg \\
-    vendor/motorola/__DEVICE__/proprietary/minipad.enc:system/etc/minipad/104/minipad.enc \\
-    vendor/motorola/__DEVICE__/proprietary/saveconfig.cfg:system/etc/minipad/104/saveconfig.cfg \\
-    vendor/motorola/__DEVICE__/proprietary/AudioFilter.csv:system/etc/AudioFilter.csv \\
-    vendor/motorola/__DEVICE__/proprietary/AudioPara4.csv:system/etc/AudioPara4.csv \\
-    vendor/motorola/__DEVICE__/proprietary/BCM4325D1_004.002.004.0218.0225.hcd:system/etc/BCM4325D1_004.002.004.0218.0225.hcd \\
-    vendor/motorola/__DEVICE__/proprietary/sdio-g-cdc-reclaim-wme.bin:system/etc/wifi/sdio-g-cdc-reclaim-wme.bin \\
-    vendor/motorola/__DEVICE__/proprietary/libGLES_qcom.so:system/lib/egl/libGLES_qcom.so \\
-    vendor/motorola/__DEVICE__/proprietary/libaudioeq.so:system/lib/libaudioeq.so \\
-    vendor/motorola/__DEVICE__/proprietary/libril-qc-1.so:system/lib/libril-qc-1.so \\
-    vendor/motorola/__DEVICE__/proprietary/libril-moto-umts-1.so:system/lib/libril-moto-umts-1.so \\
-    vendor/motorola/__DEVICE__/proprietary/libwmsts.so:system/lib/libwmsts.so \\
-    vendor/motorola/__DEVICE__/proprietary/libqmi.so:system/lib/libqmi.so \\
-    vendor/motorola/__DEVICE__/proprietary/libnv.so:system/lib/libnv.so \\
-    vendor/motorola/__DEVICE__/proprietary/libwmsts.so:system/lib/libwmsts.so \\
-    vendor/motorola/__DEVICE__/proprietary/libcm.so:system/lib/libcm.so \\
-    vendor/motorola/__DEVICE__/proprietary/libdss.so:system/lib/libdss.so \\
-    vendor/motorola/__DEVICE__/proprietary/libdsm.so:system/lib/libdsm.so \\
-    vendor/motorola/__DEVICE__/proprietary/libmmgsdilib.so:system/lib/libmmgsdilib.so \\
-    vendor/motorola/__DEVICE__/proprietary/libgsdi_exp.so:system/lib/libgsdi_exp.so \\
-    vendor/motorola/__DEVICE__/proprietary/libgstk_exp.so:system/lib/libgstk_exp.so \\
-    vendor/motorola/__DEVICE__/proprietary/libwms.so:system/lib/libwms.so \\
-    vendor/motorola/__DEVICE__/proprietary/liboncrpc.so:system/lib/liboncrpc.so \\
-    vendor/motorola/__DEVICE__/proprietary/libqueue.so:system/lib/libqueue.so \\
-    vendor/motorola/__DEVICE__/proprietary/libsnd.so:system/lib/libsnd.so \\
-    vendor/motorola/__DEVICE__/proprietary/libmm-adspsvc.so:system/lib/libmm-adspsvc.so \\
-    vendor/motorola/__DEVICE__/proprietary/libmmcamera.so:system/lib/libmmcamera.so \\
-    vendor/motorola/__DEVICE__/proprietary/libOmxH264Dec.so:system/lib/libOmxH264Dec.so \\
-    vendor/motorola/__DEVICE__/proprietary/libOmxMpeg4Dec.so:system/lib/libOmxMpeg4Dec.so \\
-    vendor/motorola/__DEVICE__/proprietary/libOmxVidEnc.so:system/lib/libOmxVidEnc.so \\
-    vendor/motorola/__DEVICE__/proprietary/libvideotrimer.so:system/lib/libvideotrimer.so \\
-    vendor/motorola/__DEVICE__/proprietary/libmm-qcamera-tgt.so:system/lib/libmm-qcamera-tgt.so \\
-    vendor/motorola/__DEVICE__/proprietary/libmmjpeg.so:system/lib/libmmjpeg.so \\
-    vendor/motorola/__DEVICE__/proprietary/libhpprop.so:system/lib/libhpprop.so \\
-    vendor/motorola/__DEVICE__/proprietary/libomx_sharedlibrary_qc.so:system/lib/libomx_sharedlibrary_qc.so \\
-    vendor/motorola/__DEVICE__/proprietary/libomx_wmadec_sharedlibrary.so:system/lib/libomx_wmadec_sharedlibrary.so \\
-    vendor/motorola/__DEVICE__/proprietary/libomx_wmvdec_sharedlibrary.so:system/lib/libomx_wmvdec_sharedlibrary.so \\
-    vendor/motorola/__DEVICE__/proprietary/libOmxMp3Dec.so:system/lib/libOmxMp3Dec.so \\
-    vendor/motorola/__DEVICE__/proprietary/libopencore_motlocal.so:system/lib/libopencore_motlocal.so \\
-    vendor/motorola/__DEVICE__/proprietary/libopencore_motlocalreg.so:system/lib/libopencore_motlocalreg.so \\
-    vendor/motorola/__DEVICE__/proprietary/libspeech.so:system/lib/libspeech.so \\
-    vendor/motorola/__DEVICE__/proprietary/01_pvplayer_mot.cfg:system/etc/01_pvplayer_mot.cfg \\
-    vendor/motorola/__DEVICE__/proprietary/nvram.txt:system/etc/wifi/nvram.txt \\
-    vendor/motorola/__DEVICE__/proprietary/pvplayer_mot.cfg:system/etc/pvplayer_mot.cfg \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/akmd2:system/bin/akmd2 \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/touchpad:system/bin/touchpad \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/minipadut:system/bin/minipadut \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/qmuxd:system/bin/qmuxd \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/fuel_gauge:system/bin/fuel_gauge \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/port_bridge:system/bin/port_bridge \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/tcmd_engine:system/bin/tcmd_engine \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/tcmd_sql:system/bin/tcmd_sql \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bt_downloader:system/bin/bt_downloader \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bt_init:system/bin/bt_init \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bt_init.config:system/etc/bt_init.config \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/akmd_set.cfg:system/etc/akm/akmd_set.cfg \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/0006.dffs:system/etc/fuel_gauge/0006.dffs \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/0301.bqfs:system/etc/fuel_gauge/0301.bqfs \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/minipad.cfg:system/etc/minipad/104/minipad.cfg \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/minipad.enc:system/etc/minipad/104/minipad.enc \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/saveconfig.cfg:system/etc/minipad/104/saveconfig.cfg \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/touchpad.cfg:system/etc/touchpad/50/touchpad.cfg \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/touchpad.enc:system/etc/touchpad/50/touchpad.enc \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/tpsaveconfig.cfg:system/etc/touchpad/50/saveconfig.cfg \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/AudioFilter.csv:system/etc/AudioFilter.csv \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/AudioPara4.csv:system/etc/AudioPara4.csv \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/BCM4325D1_004.002.004.0218.0225.hcd:system/etc/BCM4325D1_004.002.004.0218.0225.hcd \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/sdio-g-cdc-reclaim-wme.bin:system/etc/wifi/sdio-g-cdc-reclaim-wme.bin \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libGLES_qcom.so:system/lib/egl/libGLES_qcom.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libaudioeq.so:system/lib/libaudioeq.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libril-qc-1.so:system/lib/libril-qc-1.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libril-moto-umts-1.so:system/lib/libril-moto-umts-1.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libwmsts.so:system/lib/libwmsts.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libqmi.so:system/lib/libqmi.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libnv.so:system/lib/libnv.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libwmsts.so:system/lib/libwmsts.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libcm.so:system/lib/libcm.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libdss.so:system/lib/libdss.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libdsm.so:system/lib/libdsm.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libmmgsdilib.so:system/lib/libmmgsdilib.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libgsdi_exp.so:system/lib/libgsdi_exp.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libgstk_exp.so:system/lib/libgstk_exp.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libwms.so:system/lib/libwms.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/liboncrpc.so:system/lib/liboncrpc.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libqueue.so:system/lib/libqueue.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libsnd.so:system/lib/libsnd.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libmm-adspsvc.so:system/lib/libmm-adspsvc.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libmmcamera.so:system/lib/libmmcamera.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libOmxH264Dec.so:system/lib/libOmxH264Dec.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libOmxMpeg4Dec.so:system/lib/libOmxMpeg4Dec.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libOmxVidEnc.so:system/lib/libOmxVidEnc.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libvideotrimer.so:system/lib/libvideotrimer.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libmm-qcamera-tgt.so:system/lib/libmm-qcamera-tgt.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libmmjpeg.so:system/lib/libmmjpeg.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libhpprop.so:system/lib/libhpprop.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libomx_sharedlibrary_qc.so:system/lib/libomx_sharedlibrary_qc.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libomx_wmadec_sharedlibrary.so:system/lib/libomx_wmadec_sharedlibrary.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libomx_wmvdec_sharedlibrary.so:system/lib/libomx_wmvdec_sharedlibrary.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libOmxMp3Dec.so:system/lib/libOmxMp3Dec.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libopencore_motlocal.so:system/lib/libopencore_motlocal.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libopencore_motlocalreg.so:system/lib/libopencore_motlocalreg.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libspeech.so:system/lib/libspeech.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/01_pvplayer_mot.cfg:system/etc/01_pvplayer_mot.cfg \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/nvram.txt:system/etc/wifi/nvram.txt \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/pvplayer_mot.cfg:system/etc/pvplayer_mot.cfg \\
 
 EOF
 
