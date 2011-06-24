@@ -45,12 +45,6 @@ BOARD_KERNEL_CMDLINE := no_console_suspend=1 console=null quiet
 BOARD_USE_USB_MASS_STORAGE_SWITCH := true
 BOARD_CUSTOM_USB_CONTROLLER := ../../device/motorola/motus/UsbController.cpp
 
-# FM Radio
-BOARD_HAVE_FM_RADIO := true
-TARGET_GLOBAL_CFLAGS += -DHAVE_FM_RADIO
-TARGET_GLOBAL_CPPFLAGS += -DHAVE_FM_RADIO
-BOARD_USE_BROADCOM_FM_VOLUME_HACK := true
-
 # Browser JS engine
 JS_ENGINE := v8
 
