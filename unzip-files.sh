@@ -20,6 +20,7 @@ DEVICE=motus
 MANUFACTURER=motorola
 
 mkdir -p ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+mkdir -p ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/touchpad
 unzip -j -o ../../../${DEVICE}_update.zip system/bin/akmd2 -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 chmod 755 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/akmd2
 unzip -j -o ../../../${DEVICE}_update.zip system/bin/touchpad -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
@@ -40,16 +41,17 @@ unzip -j -o ../../../${DEVICE}_update.zip system/bin/bt_downloader -d ../../../v
 chmod 755 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bt_downloader
 unzip -j -o ../../../${DEVICE}_update.zip system/bin/bt_init -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 chmod 755 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bt_init
-unzip -j -o ../../../${DEVICE}_update.zip system/etc/dhcpcd/dhcpcd.conf ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/etc/wifi/wpa_supplicant.conf ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/etc/dhcpcd/dhcpcd.conf -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/etc/wifi/wpa_supplicant.conf -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 unzip -j -o ../../../${DEVICE}_update.zip system/etc/akm/akmd_set.cfg -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 unzip -j -o ../../../${DEVICE}_update.zip system/etc/fuel_gauge/0006.dffs -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 unzip -j -o ../../../${DEVICE}_update.zip system/etc/fuel_gauge/0301.bqfs -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 unzip -j -o ../../../${DEVICE}_update.zip system/etc/minipad/104/minipad.cfg -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 unzip -j -o ../../../${DEVICE}_update.zip system/etc/minipad/104/minipad.enc -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 unzip -j -o ../../../${DEVICE}_update.zip system/etc/minipad/104/saveconfig.cfg -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/etc/touchpad/50/touchpad.cfg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/etc/touchpad/50/touchpad.enc ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/etc/touchpad/50/touchpad.cfg -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/etc/touchpad/50/touchpad.enc -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/etc/touchpad/50/saveconfig.cfg -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/touchpad/
 unzip -j -o ../../../${DEVICE}_update.zip system/etc/bt_init.config -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 unzip -j -o ../../../${DEVICE}_update.zip system/etc/AudioFilter.csv -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 unzip -j -o ../../../${DEVICE}_update.zip system/etc/AudioPara4.csv -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
@@ -138,6 +140,7 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/saveconfig.cfg:system/etc/minipad/104/saveconfig.cfg \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/touchpad.cfg:system/etc/touchpad/50/touchpad.cfg \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/touchpad.enc:system/etc/touchpad/50/touchpad.enc \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/touchpad/saveconfig.cfg:system/etc/touchpad/50/saveconfig.cfg \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/AudioFilter.csv:system/etc/AudioFilter.csv \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/AudioPara4.csv:system/etc/AudioPara4.csv \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/BCM4325D1_004.002.004.0218.0225.hcd:system/etc/BCM4325D1_004.002.004.0218.0225.hcd \\

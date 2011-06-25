@@ -124,7 +124,6 @@ PRODUCT_COPY_FILES += \
     device/motorola/motus/btenable.sh:system/bin/btenable.sh \
     device/motorola/motus/media_profiles.xml:/system/etc/media_profiles.xml \
     device/motorola/motus/sysctl.conf:system/etc/sysctl.conf \
-    device/motorola/motus/touchpad/saveconfig.cfg:system/etc/touchpad/50/saveconfig.cfg \
     device/motorola/motus/disable-notification-led.sh:system/etc/init.d/70disable-notification-led
 
 $(call inherit-product, build/target/product/full_base.mk)
