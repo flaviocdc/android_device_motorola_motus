@@ -26,8 +26,7 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
 PRODUCT_COPY_FILES += \
     device/motorola/motus/init.motus.rc:root/init.motus.rc \
-    device/motorola/motus/ueventd.motus.rc:root/ueventd.motus.rc \
-    device/motorola/motus/charge_only_mode:root/sbin/charge_only_mode
+    device/motorola/motus/ueventd.motus.rc:root/ueventd.motus.rc
 
 ## (3)  Finally, the least specific parts, i.e. the non-GSM-specific aspects
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -75,7 +74,8 @@ PRODUCT_PACKAGES += \
     libaudio \
     rzscontrol \
     dexpreopt \
-    setrecovery
+    setrecovery \
+    charge_only_mode
 
 DISABLE_DEXPREOPT := true
 
