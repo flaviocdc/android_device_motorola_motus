@@ -50,7 +50,7 @@ adb pull /system/etc/minipad/104/minipad.enc ../../../vendor/$MANUFACTURER/$DEVI
 adb pull /system/etc/minipad/104/saveconfig.cfg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 adb pull /system/etc/touchpad/50/touchpad.cfg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 adb pull /system/etc/touchpad/50/touchpad.enc ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
-adb pull /system/etc/touchpad/50/saveconfig.cfg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/tpsaveconfig.cfg
+adb pull /system/etc/touchpad/50/saveconfig.cfg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/tpsaveconfig.cfg/
 adb pull /system/etc/bt_init.config ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 adb pull /system/etc/AudioFilter.csv ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 adb pull /system/etc/AudioPara4.csv ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/

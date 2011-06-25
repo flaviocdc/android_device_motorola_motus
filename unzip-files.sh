@@ -48,6 +48,9 @@ unzip -j -o ../../../${DEVICE}_update.zip system/etc/fuel_gauge/0301.bqfs -d ../
 unzip -j -o ../../../${DEVICE}_update.zip system/etc/minipad/104/minipad.cfg -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 unzip -j -o ../../../${DEVICE}_update.zip system/etc/minipad/104/minipad.enc -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 unzip -j -o ../../../${DEVICE}_update.zip system/etc/minipad/104/saveconfig.cfg -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/etc/touchpad/50/touchpad.cfg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/etc/touchpad/50/touchpad.enc ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+unzip -j -o ../../../${DEVICE}_update.zip system/etc/touchpad/50/saveconfig.cfg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/tpsaveconfig.cfg/
 unzip -j -o ../../../${DEVICE}_update.zip system/etc/bt_init.config -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 unzip -j -o ../../../${DEVICE}_update.zip system/etc/AudioFilter.csv -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 unzip -j -o ../../../${DEVICE}_update.zip system/etc/AudioPara4.csv -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
