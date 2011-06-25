@@ -50,7 +50,6 @@ adb pull /system/etc/minipad/104/minipad.enc ../../../vendor/$MANUFACTURER/$DEVI
 adb pull /system/etc/minipad/104/saveconfig.cfg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 adb pull /system/etc/touchpad/50/touchpad.cfg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 adb pull /system/etc/touchpad/50/touchpad.enc ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
-adb pull /system/etc/touchpad/50/saveconfig.cfg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/tpsaveconfig.cfg/
 adb pull /system/etc/bt_init.config ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 adb pull /system/etc/AudioFilter.csv ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 adb pull /system/etc/AudioPara4.csv ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
@@ -139,7 +138,6 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/saveconfig.cfg:system/etc/minipad/104/saveconfig.cfg \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/touchpad.cfg:system/etc/touchpad/50/touchpad.cfg \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/touchpad.enc:system/etc/touchpad/50/touchpad.enc \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/tpsaveconfig.cfg:system/etc/touchpad/50/saveconfig.cfg \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/AudioFilter.csv:system/etc/AudioFilter.csv \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/AudioPara4.csv:system/etc/AudioPara4.csv \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/BCM4325D1_004.002.004.0218.0225.hcd:system/etc/BCM4325D1_004.002.004.0218.0225.hcd \\
