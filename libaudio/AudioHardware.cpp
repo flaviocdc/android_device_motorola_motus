@@ -1398,7 +1398,7 @@ status_t AudioHardware::AudioStreamOutMSM72xx::setParameters(const String8& keyV
         param.remove(key);
     }
 
-    key = String8(AudioParameter::keyFmOn);
+/*    key = String8(AudioParameter::keyFmOn);
     if (param.getInt(key, device) == NO_ERROR) {
        mHardware->setFmOnOff(true);
        param.remove(key);
@@ -1409,7 +1409,7 @@ status_t AudioHardware::AudioStreamOutMSM72xx::setParameters(const String8& keyV
        mHardware->setFmOnOff(false);
        param.remove(key);
     }
-
+*/
     if (param.size()) {
         status = BAD_VALUE;
     }
