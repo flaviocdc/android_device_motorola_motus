@@ -115,7 +115,7 @@ unzip -j -o ../../../${DEVICE}_update.zip system/lib/libloc_api.so -d ../../../v
 # Prebuilt libraries that are needed to build open-source libraries
 PRODUCT_COPY_FILES := \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libloc_api.so:obj/lib/libloc_api.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libril-qc-1.so:obj/lib/libril-qc-1.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libril-qc-1.so:obj/lib/libril-qc-1.so
 
 # All the blobs necessary for motus
 PRODUCT_COPY_FILES += \\
@@ -181,7 +181,7 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libspeech.so:system/lib/libspeech.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/01_pvplayer_mot.cfg:system/etc/01_pvplayer_mot.cfg \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/nvram.txt:system/etc/wifi/nvram.txt \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/pvplayer_mot.cfg:system/etc/pvplayer_mot.cfg \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/pvplayer_mot.cfg:system/etc/pvplayer_mot.cfg
 
 EOF
 
