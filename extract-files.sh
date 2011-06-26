@@ -93,7 +93,7 @@ adb pull /system/lib/libspeech.so ../../../vendor/$MANUFACTURER/$DEVICE/propriet
 adb pull /system/etc/01_pvplayer_mot.cfg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 adb pull /system/etc/wifi/nvram.txt ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 adb pull /system/etc/pvplayer_mot.cfg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
-adb pull /system/lib/libloc_api.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+adb pull /system/lib/libloc_api.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 
 (cat << EOF) | sed s/__DEVICE__/$DEVICE/g | sed s/__MANUFACTURER__/$MANUFACTURER/g > ../../../vendor/$MANUFACTURER/$DEVICE/device-vendor-blobs.mk
 # Copyright (C) 2010 The Android Open Source Project
