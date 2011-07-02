@@ -40,8 +40,6 @@ unzip -j -o ../../../${DEVICE}_update.zip system/bin/bt_downloader -d ../../../v
 chmod 755 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bt_downloader
 unzip -j -o ../../../${DEVICE}_update.zip system/bin/bt_init -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 chmod 755 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bt_init
-unzip -j -o ../../../${DEVICE}_update.zip system/etc/dhcpcd/dhcpcd.conf -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/etc/wifi/wpa_supplicant.conf -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 unzip -j -o ../../../${DEVICE}_update.zip system/etc/akm/akmd_set.cfg -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 unzip -j -o ../../../${DEVICE}_update.zip system/etc/fuel_gauge/0006.dffs -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 unzip -j -o ../../../${DEVICE}_update.zip system/etc/fuel_gauge/0301.bqfs -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
@@ -129,8 +127,6 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bt_downloader:system/bin/bt_downloader \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bt_init:system/bin/bt_init \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bt_init.config:system/etc/bt_init.config \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/akmd_set.cfg:system/etc/akm/akmd_set.cfg \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/0006.dffs:system/etc/fuel_gauge/0006.dffs \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/0301.bqfs:system/etc/fuel_gauge/0301.bqfs \\

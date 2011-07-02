@@ -40,8 +40,6 @@ adb pull /system/bin/bt_downloader ../../../vendor/$MANUFACTURER/$DEVICE/proprie
 chmod 755 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bt_downloader
 adb pull /system/bin/bt_init ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 chmod 755 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bt_init
-adb pull /system/etc/dhcpcd/dhcpcd.conf ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
-adb pull /system/etc/wifi/wpa_supplicant.conf ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 adb pull /system/etc/akm/akmd_set.cfg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 adb pull /system/etc/fuel_gauge/0006.dffs ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 adb pull /system/etc/fuel_gauge/0301.bqfs ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
@@ -129,8 +127,6 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bt_downloader:system/bin/bt_downloader \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bt_init:system/bin/bt_init \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bt_init.config:system/etc/bt_init.config \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/akmd_set.cfg:system/etc/akm/akmd_set.cfg \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/0006.dffs:system/etc/fuel_gauge/0006.dffs \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/0301.bqfs:system/etc/fuel_gauge/0301.bqfs \\
