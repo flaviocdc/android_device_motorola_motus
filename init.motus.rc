@@ -51,8 +51,6 @@ on boot
     mount tmpfs tmpfs /cache/tmp
 
 # Broadcom stuff
-    chown bluetooth bluetooth /sys/module/board_motus/parameters/bluetooth_power_on
-    chmod 0660 /sys/module/board_motus/parameters/bluetooth_power_on
     chown bluetooth bluetooth /proc/bt_power
     chmod 0666 /proc/bt_power
 
@@ -153,7 +151,7 @@ service akmd2 /system/bin/akmd2 -f /system/etc/akm/akmd_set.cfg
     oneshot
 
 ## TCMD
-#service tcmd /system/bin/tcmd_engine usb0
+service tcmd /system/bin/tcmd_engine usb0
 
 service fuel_gauge /system/bin/fuel_gauge --all
     oneshot
@@ -190,19 +188,10 @@ service dhcpcd /system/bin/dhcpcd -ABKL
     oneshot
 
 #bluetooth 
-service hciattach /system/bin/brcm_patchram_plus --enable_hci --baudrate 3000000  --patchram /system/etc/BCM4325D1_004.002.004.0218.0225.hcd /dev/ttyHS0
-    user bluetooth
-    group bluetooth net_bt_admin net_admin net_raw misc
-    disabled
-
-service hcid /system/bin/hcid -s -n -f /etc/bluez/hcid.conf
-    class BT
-    socket bluetooth stream 660 bluetooth bluetooth
-    socket dbus_bluetooth stream 660 bluetooth bluetooth
-    # init.rc does not yet support applying capabilities, so run as root and
-    # let hcid drop uid to bluetooth with the right linux capabilities
+service hciattach /system/bin/hciattach -s 3000000 /dev/ttyMSM0 any 3000000 flow
     group bluetooth net_bt_admin misc
     disabled
+    oneshot
 
 service port_bridge /system/bin/port_bridge /dev/smd0 /dev/ttyHSUSB0
 	user radio
