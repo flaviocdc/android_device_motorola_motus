@@ -339,7 +339,7 @@
     <bool name="config_enableScreenOnAnimation">false</bool>
 
     <!-- Enable the screen-off animation -->
-    <bool name="config_enableScreenOffAnimation">true</bool>
+    <bool name="config_enableScreenOffAnimation">false</bool>
 
     <!-- If this is true, the screen will fade off. -->
     <bool name="config_animateScreenLights">true</bool>
