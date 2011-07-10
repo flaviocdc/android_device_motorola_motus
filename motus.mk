@@ -74,8 +74,7 @@ PRODUCT_PACKAGES += \
     libaudio \
     rzscontrol \
     dexpreopt \
-    setrecovery \
-    charge_only_mode
+    setrecovery
 
 DISABLE_DEXPREOPT := true
 
