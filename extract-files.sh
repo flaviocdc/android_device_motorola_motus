@@ -91,6 +91,7 @@ adb pull /system/etc/01_pvplayer_mot.cfg ../../../vendor/$MANUFACTURER/$DEVICE/p
 adb pull /system/etc/wifi/nvram.txt ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 adb pull /system/etc/pvplayer_mot.cfg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 adb pull /system/lib/libloc_api.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+adb pull /sbin/charge_only_mode ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 
 (cat << EOF) | sed s/__DEVICE__/$DEVICE/g | sed s/__MANUFACTURER__/$MANUFACTURER/g > ../../../vendor/$MANUFACTURER/$DEVICE/$DEVICE-vendor-blobs.mk
 # Copyright (C) 2010 The Android Open Source Project
@@ -176,7 +177,8 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libspeech.so:system/lib/libspeech.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/01_pvplayer_mot.cfg:system/etc/01_pvplayer_mot.cfg \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/nvram.txt:system/etc/wifi/nvram.txt \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/pvplayer_mot.cfg:system/etc/pvplayer_mot.cfg
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/pvplayer_mot.cfg:system/etc/pvplayer_mot.cfg \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/charge_only_mode:root/sbin/charge_only_mode
 
 EOF
 
