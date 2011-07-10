@@ -76,16 +76,11 @@ adb pull /system/lib/libmmcamera.so ../../../vendor/$MANUFACTURER/$DEVICE/propri
 adb pull /system/lib/libOmxH264Dec.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 adb pull /system/lib/libOmxMpeg4Dec.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 adb pull /system/lib/libOmxVidEnc.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
+adb pull /system/lib/libOmxMp3Dec.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 adb pull /system/lib/libvideotrimer.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 adb pull /system/lib/libmm-qcamera-tgt.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 adb pull /system/lib/libhpprop.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 adb pull /system/lib/libmmjpeg.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
-adb pull /system/lib/libomx_sharedlibrary_qc.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
-adb pull /system/lib/libomx_wmadec_sharedlibrary.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
-adb pull /system/lib/libOmxMp3Dec.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
-adb pull /system/lib/libomx_wmvdec_sharedlibrary.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
-adb pull /system/lib/libopencore_motlocal.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
-adb pull /system/lib/libopencore_motlocalreg.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 adb pull /system/lib/libspeech.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 adb pull /system/etc/01_pvplayer_mot.cfg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
 adb pull /system/etc/wifi/nvram.txt ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/
@@ -164,16 +159,11 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libOmxH264Dec.so:system/lib/libOmxH264Dec.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libOmxMpeg4Dec.so:system/lib/libOmxMpeg4Dec.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libOmxVidEnc.so:system/lib/libOmxVidEnc.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libOmxMp3Dec.so:system/lib/libOmxMp3Dec.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libvideotrimer.so:system/lib/libvideotrimer.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libmm-qcamera-tgt.so:system/lib/libmm-qcamera-tgt.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libmmjpeg.so:system/lib/libmmjpeg.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libhpprop.so:system/lib/libhpprop.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libomx_sharedlibrary_qc.so:system/lib/libomx_sharedlibrary_qc.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libomx_wmadec_sharedlibrary.so:system/lib/libomx_wmadec_sharedlibrary.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libomx_wmvdec_sharedlibrary.so:system/lib/libomx_wmvdec_sharedlibrary.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libOmxMp3Dec.so:system/lib/libOmxMp3Dec.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libopencore_motlocal.so:system/lib/libopencore_motlocal.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libopencore_motlocalreg.so:system/lib/libopencore_motlocalreg.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libspeech.so:system/lib/libspeech.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/01_pvplayer_mot.cfg:system/etc/01_pvplayer_mot.cfg \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/nvram.txt:system/etc/wifi/nvram.txt \\
