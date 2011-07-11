@@ -44,6 +44,7 @@ TARGET_PREBUILT_KERNEL := device/motorola/motus/kernel
 BOARD_KERNEL_CMDLINE := no_console_suspend=1 console=null quiet
 BOARD_USE_USB_MASS_STORAGE_SWITCH := true
 BOARD_CUSTOM_USB_CONTROLLER := ../../device/motorola/motus/UsbController.cpp
+BOARD_UMS_LUNFILE := "/sys/devices/platform/usb_mass_storage/lun0/file"
 
 # Browser JS engine
 JS_ENGINE := v8
@@ -105,4 +106,6 @@ TARGET_RECOVERY_PRE_COMMAND := "setrecovery recovery"
 BOARD_CUSTOM_RECOVERY_KEYMAPPING:= ../../device/motorola/motus/recovery/recovery_ui.c
 
 TARGET_PREBUILT_RECOVERY_KERNEL := device/motorola/motus/recovery_kernel
+
+# Storage
 
