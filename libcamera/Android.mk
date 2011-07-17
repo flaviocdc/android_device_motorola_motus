@@ -13,7 +13,7 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE_TAGS:=optional
 
-LOCAL_SRC_FILES:= QualcommCameraHardware.cpp exifwriter.c jdatadst.cpp jpegConvert.cpp
+LOCAL_SRC_FILES:= QualcommCameraHardware.cpp exifwriter.c jdatadst.cpp jpegConvert.cpp MotusHal.cpp
 
 LOCAL_CFLAGS:= -DDLOPEN_LIBMMCAMERA=$(DLOPEN_LIBMMCAMERA)
 
